@@ -7,7 +7,13 @@ from django.contrib import messages
 
 # Create your views here.
 def home(request):
-    return render(request, 'foundation/home.html')
+    posts = HomeBlog.objects.order_by("-date_posted")
+    events = HomeEvent.objects.order_by("-start_date")
+    context = {
+        'posts': posts,
+        'events': events
+    }
+    return render(request, 'foundation/home.html', context)
 
 def about(request):
     context = {
@@ -16,24 +22,40 @@ def about(request):
     return render(request, 'foundation/about.html', context)
 
 def latest_cause(request):
+    causes = LatestCause.objects.all()
     context = {
+        'causes': causes,
         'title': 'Latest Causes'
     }
     return render(request, 'foundation/latest_cause.html', context)
 
 def social_event(request):
+    social_events = Event.objects.order_by('-start_date')
     context = {
+        'social_events': social_events,
         'title': 'Social Events'
     }
     return render(request, 'foundation/social_event.html', context)
 
 def blog(request):
+    blogs = Blog.objects.order_by("-date_posted")
+    galaries = Galary.objects.all()
     context = {
+        'blogs': blogs,
+        'galaries': galaries,
         'title': 'Blogs'
     }
     return render(request, 'foundation/blog.html', context)
 
 def contact(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        message = request.POST['message']
+        contact = Contact(name=name, email=email, phone=phone, message=message)
+        contact.save()
+        messages.info(request, "Your form has been submitted")
     context = {
         'title': 'Contact Us'
     }

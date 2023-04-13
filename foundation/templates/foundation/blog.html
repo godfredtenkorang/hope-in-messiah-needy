@@ -16,29 +16,28 @@
 <section>
     <div class="container">
         <div class="row">
+            {% for blog in blogs %}
             <div class="col-md-8 pt-4">
                 <article class="media content-section">
                     <div class="media-body">
                         <div class="article-metadata">
-                            <a class="mr-2" href="#">Hope</a>
-                            <small class="text-muted">12/12/12</small>
+                            <a class="mr-2" href="#">{{ blog.author }}</a>
+                            <small class="text-muted">{{ blog.date_posted|date:"Y d, y" }}</small>
                         </div>
-                        <img src="{% static 'foundation/images/donate222.jpeg' %}" height="350px" width="100%" alt="">
-                        <h2><a href="" class="article-title">Hi</a></h2>
-                        <p class="article-content">Hello</p>
+                        <img src="{{ blog.image.url }}" height="350px" width="100%" alt="">
+                        <h2><a href="" class="article-title">{{ blog.title }}</a></h2>
+                        <p class="article-content">{{ blog.content }}</p>
                     </div>
                 </article>
             </div>
+            {% endfor %}
             <div class="col-md-4 pt-4">
                 <h3>Galary</h3>
+                {% for galary in galaries %}
                 <div>
-                    <img class="pb-3" src="{% static 'foundation/images/donate222.jpeg' %}" height="120px" alt="">
-                    <img class="pb-3" src="{% static 'foundation/images/donate222.jpeg' %}" height="120px" alt="">
-                    <img class="pb-3" src="{% static 'foundation/images/donate222.jpeg' %}" height="120px" alt="">
-                    <img class="pb-3" src="{% static 'foundation/images/donate222.jpeg' %}" height="120px" alt="">
-                    <img class="pb-3" src="{% static 'foundation/images/donate222.jpeg' %}" height="120px" alt="">
-                    <img class="pb-3" src="{% static 'foundation/images/donate222.jpeg' %}" height="120px" alt="">
+                    <img class="pb-3 d-flex justify-content-center" src="{{ galary.image.url }}" height="300px" width="400px" alt="">
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>

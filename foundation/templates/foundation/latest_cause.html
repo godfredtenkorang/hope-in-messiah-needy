@@ -16,21 +16,23 @@
 <section>
     <div class="container">
         <div class="row">
+            {% for cause in causes %}
             <div class="col-md-4 pt-4 d-flex justify-content-center">
                 <div class="card">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
+                    <img src="{{ cause.image.url }}" height="250px" alt="">
                     <div class="card-body">
-                        <h3 class="card-title">Charity for the needy</h3>
+                        <h3 class="card-title">{{ cause.title }}</h3>
                         <div class="card-text">
                             <div class="progress">
-                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                <div class="progress-bar progress-bar-striped" role="progressbar" style="width: {{ cause.value }}%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">{{ cause.value }}</div>
                               </div>
-                            <small style="float:right">Goals: <small style="font-size: 15px;">GH¢60.00</small></small>
-                            <small>Raised: <small style="font-size: 15px;">GH¢40.00</small></small>
+                            <small style="float:right">Goals: <small style="font-size: 15px;">GH¢{{ cause.amount_goal }}</small></small>
+                            <small>Raised: <small style="font-size: 15px;">GH¢{{ cause.amount_raised }}</small></small>
                         </div>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>

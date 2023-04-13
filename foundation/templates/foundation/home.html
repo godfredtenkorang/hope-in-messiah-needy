@@ -10,8 +10,8 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="intro-content">
-                        <h1 style="font-family: 'Merriweather', serif;">HOPE IN MESSIAH NEEDY</h1>
-                        <p>We are more concern in changing the world by giving what God has given you.</p>
+                    <h1 style="font-family: 'Merriweather', serif;">HOPE IN MESSIAH NEEDY</h1>
+                    <p>We are more concern in changing the world by giving what God has given you.</p>
                     <div>
                         <a class="btn btn-outline-secondary" href="{% url 'donate' %}">Donate</a>
                         <small>+1 000 0000 000</small>
@@ -74,191 +74,134 @@
         </div>
     </div>
 </section>
-<section class="pt-4 mt-4 pb-4" style="background-color: #eee;">
+<section class="pt-4 mt-4 pb-4 p-5" style="background-color: #eee;">
     <div class="four">
         <h1 class="heading-title"><span>WHAT WE DO</span>We Arrange Many Social Events<br> For <em>Charity</em>Donations
         </h1>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 pt-4 d-flex justify-content-center">
-                <div class="card">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
-                    <div class="card-body">
-                        <h3 class="card-title">Charity for the needy</h3>
-                        <div style="display: flex;
+    <div class="row">
+        {% for event in events %}
+        <div class="col-md-3 pt-4 d-flex justify-content-center">
+            <div class="card">
+                <img src="{{ event.image.url }}" height="300px" alt="">
+                <div class="card-body">
+                    <h3 class="card-title">{{ event.title }}</h3>
+                    <div style="display: flex;
                         justify-content: space-around;" class="card-text">
-                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="15px"
-                                    alt="">12:12</p>
+                        <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="13px"
+                                alt="">{{ event.start_time|date:"P" }}</p>
 
-                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="15px"
-                                    alt="">12:/12/23</p>
+                        <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="13px"
+                                alt="">{{ event.start_date|date:"F d, y" }}</p>
 
-                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="15px"
-                                    alt="">Kumasi, Ghana</p>
-                        </div>
+                        <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="13px"
+                                alt="">{{ event.location }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 pt-4 d-flex justify-content-center">
-                <div class="card">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
-                    <div class="card-body">
-                        <h3 class="card-title">Charity for the needy</h3>
-                        <div style="display: flex;
-                        justify-content: space-around;" class="card-text">
-                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="15px"
-                                    alt="">12:12</p>
-
-                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="15px"
-                                    alt="">12:/12/23</p>
-
-                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="15px"
-                                    alt="">Kumasi, Ghana</p>
-                        </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+<section class="pt-4 p-4">
+    <div class="four">
+        <h1 class="heading-title"><span>WHAT WE DO</span>Our Expert Team<br> Always <em>Ready</em> To Volunteer</h1>
+    </div>
+    <div class="row team-row pt-4">
+        <div class="column2">
+            <div class="team">
+                <div class="team-img">
+                    <img class="team-image" src="{% static 'foundation/images/dickson.jpeg' %}" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2 class="h2">Pastor Dickson Kwasi Darko</h2>
+                    <h3 class="h3">Director of Operations</h3>
+                    <p></p>
+                    <div class="team-social">
+                        <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
+                        <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
+                        <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
+                        <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 pt-4 d-flex justify-content-center">
-                <div class="card">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
-                    <div class="card-body">
-                        <h3 class="card-title">Charity for the needy</h3>
-                        <div style="display: flex;
-                        justify-content: space-around;" class="card-text">
-                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="15px"
-                                    alt="">12:12</p>
-                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="15px"
-                                    alt="">12:/12/23</p>
-                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="15px"
-                                    alt="">Kumasi, Ghana</p>
-                        </div>
+        </div>
+        <div class="column2">
+            <div class="team">
+                <div class="team-img">
+                    <img class="team-image" src="{% static 'foundation/images/boahene.jpeg' %}" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2 class="h2">Director Adu-Boahene</h2>
+                    <h3 class="h3">Director</h3>
+                    <p></p>
+                    <div class="team-social">
+                        <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
+                        <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
+                        <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
+                        <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
+
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 pt-4 d-flex justify-content-center">
-                <div class="card">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
-                    <div class="card-body">
-                        <h3 class="card-title">Charity for the needy</h3>
-                        <div style="display: flex;
-                        justify-content: space-around;" class="card-text">
-                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="15px"
-                                    alt="">12:12</p>
+        </div>
+        <div class="column2">
+            <div class="team">
+                <div class="team-img">
+                    <img class="team-image" src="{% static 'foundation/images/christy.jpeg' %}" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2 class="h2">Miss Christiana Adu-Boahene</h2>
+                    <h3 class="h3">Assisted Director</h3>
+                    <p></p>
+                    <div class="team-social">
+                        <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
+                        <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
+                        <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
+                        <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column2">
+            <div class="team">
+                <div class="team-img">
+                    <img class="team-image" src="{% static 'foundation/images/robeta.jpeg' %}" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2 class="h2">Miss Adjei Roberta</h2>
+                    <h3 class="h3">Secretary</h3>
+                    <p></p>
+                    <div class="team-social">
+                        <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
+                        <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
+                        <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
+                        <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column2">
+            <div class="team">
+                <div class="team-img">
+                    <img class="team-image" src="{% static 'foundation/images/donate222.jpeg' %}" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2 class="h2">Bishop Fred</h2>
+                    <h3 class="h3">Organiser</h3>
+                    <p></p>
+                    <div class="team-social">
+                        <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
+                        <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
+                        <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
+                        <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
 
-                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="15px"
-                                    alt="">12:/12/23</p>
-
-                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="15px"
-                                    alt="">Kumasi, Ghana</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-<section class="pt-4 p-4">
-        <div class="four">
-            <h1 class="heading-title"><span>WHAT WE DO</span>Our Expert Team<br> Always <em>Ready</em> To Volunteer</h1>
-        </div>
-        <div class="row team-row pt-4">
-            <div class="column2">
-                <div class="team">
-                    <div class="team-img">
-                        <img class="team-image" src="{% static 'foundation/images/donate222.jpeg' %}" alt="Team Image">
-                    </div>
-                    <div class="team-content">
-                        <h2 class="h2">Pastor Dickson</h2>
-                        <h3 class="h3">Director of Operations</h3>
-                        <p></p>
-                        <div class="team-social">
-                            <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
-                            <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
-                            <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
-                            <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column2">
-                <div class="team">
-                    <div class="team-img">
-                        <img class="team-image" src="{% static 'foundation/images/donate222.jpeg' %}" alt="Team Image">
-                    </div>
-                    <div class="team-content">
-                        <h2 class="h2">Bishop Fred</h2>
-                        <h3 class="h3">Organiser</h3>
-                        <p></p>
-                        <div class="team-social">
-                            <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
-                            <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
-                            <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
-                            <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column2">
-                <div class="team">
-                    <div class="team-img">
-                        <img class="team-image" src="{% static 'foundation/images/donate222.jpeg' %}" alt="Team Image">
-                    </div>
-                    <div class="team-content">
-                        <h2 class="h2">Bishop Fred</h2>
-                        <h3 class="h3">Organiser</h3>
-                        <p></p>
-                        <div class="team-social">
-                            <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
-                            <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
-                            <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
-                            <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column2">
-                <div class="team">
-                    <div class="team-img">
-                        <img class="team-image" src="{% static 'foundation/images/donate222.jpeg' %}" alt="Team Image">
-                    </div>
-                    <div class="team-content">
-                        <h2 class="h2">Bishop Fred</h2>
-                        <h3 class="h3">Organiser</h3>
-                        <p></p>
-                        <div class="team-social">
-                            <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
-                            <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
-                            <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
-                            <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column2">
-                <div class="team">
-                    <div class="team-img">
-                        <img class="team-image" src="{% static 'foundation/images/donate222.jpeg' %}" alt="Team Image">
-                    </div>
-                    <div class="team-content">
-                        <h2 class="h2">Bishop Fred</h2>
-                        <h3 class="h3">Organiser</h3>
-                        <p></p>
-                        <div class="team-social">
-                            <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
-                            <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
-                            <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
-                            <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
 </section>
 <div class="slider" style="background-color:#eee">
     <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
@@ -300,39 +243,19 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 pt-4">
-                <div class="card">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="350px" alt="">
-                    <div class="card-body">
-                        <h2 class="card-title">Hope in Messiah Needy</h2>
-                        <div class="card-text">
-                            <p>You can be with us</p>
+            {% for post in posts %}
+                <div class="col-md-4 pt-4">
+                    <div class="card">
+                        <img src="{{ post.image.url }}" height="350px" alt="">
+                        <div class="card-body">
+                            <h2 class="card-title">{{ post.title }}</h2>
+                            <div class="card-text">
+                                <p>{{ post.content }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 pt-4">
-                <div class="card">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="350px" alt="">
-                    <div class="card-body">
-                        <h2 class="card-title">Hope in Messiah Needy</h2>
-                        <div class="card-text">
-                            <p>You can be with us</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 pt-4">
-                <div class="card">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="350px" alt="">
-                    <div class="card-body">
-                        <h2 class="card-title">Hope in Messiah Needy</h2>
-                        <div class="card-text">
-                            <p>You can be with us</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

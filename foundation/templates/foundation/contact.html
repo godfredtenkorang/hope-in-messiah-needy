@@ -13,6 +13,15 @@
         </div>
     </div>
 </section>
+<div class="row">
+    <div class="col-md-12">
+      {% if messages %}
+       {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+      {% endfor %}
+       {% endif %}
+    </div>
+  </div>
 <section style="overflow: hidden;">
     <div class="container">
         <div class="col-md-12">
@@ -53,7 +62,7 @@
 
         <!-- Left contact page -->
 
-        <form method="POST" id="contact-form" class="form-horizontal" role="form">
+        <form method="POST" class="form-horizontal">
             {% csrf_token %}
             <div class="form-group">
                 <div class="col-sm-12">
@@ -72,7 +81,7 @@
                         required>
                 </div>
             </div>
-            <textarea class="form-control" rows="6" placeholder="MESSAGE" name="message" required></textarea>
+            <textarea class="form-control" rows="6" placeholder="MESSAGE" id="message" name="message" required></textarea>
             <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
                 <div class="alt-send-button">
                     <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>

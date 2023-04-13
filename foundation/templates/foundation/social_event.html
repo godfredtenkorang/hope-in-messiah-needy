@@ -13,91 +13,34 @@
         </div>
     </div>
 </section>
-<section class="pt-4 pb-4">
+<section class="pt-4 mt-4 pb-4 p-5">
     <div class="four">
         <h1 class="heading-title"><span>WHAT WE DO</span>We Arrange Many Social Events<br> For <em>Charity</em>Donations
         </h1>
     </div>
-    <div class="container">
         <div class="row">
+            {% for social in social_events %}
             <div class="col-md-3 pt-4 d-flex justify-content-center">
                 <div class="card">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
+                    <img src="{{ social.image.url }}" height="300px" alt="">
                     <div class="card-body">
-                        <h3 class="card-title">Charity for the needy</h3>
+                        <h3 class="card-title">{{ social.title }}</h3>
                         <div style="display: flex;
                         justify-content: space-around;" class="card-text">
-                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="15px"
-                                    alt="">12:12</p>
+                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="13px"
+                                    alt="">{{ social.start_time|date:"P" }}</p>
 
-                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="15px"
-                                    alt="">12:/12/23</p>
+                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="13px"
+                                    alt="">{{ social.start_date|date:"Y d, y" }}</p>
 
-                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="15px"
-                                    alt="">Kumasi, Ghana</p>
+                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="13px"
+                                    alt="">{{ social.location }}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 pt-4 d-flex justify-content-center">
-                <div class="card">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
-                    <div class="card-body">
-                        <h3 class="card-title">Charity for the needy</h3>
-                        <div style="display: flex;
-                        justify-content: space-around;" class="card-text">
-                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="15px"
-                                    alt="">12:12</p>
-
-                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="15px"
-                                    alt="">12:/12/23</p>
-
-                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="15px"
-                                    alt="">Kumasi, Ghana</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 pt-4 d-flex justify-content-center">
-                <div class="card">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
-                    <div class="card-body">
-                        <h3 class="card-title">Charity for the needy</h3>
-                        <div style="display: flex;
-                        justify-content: space-around;" class="card-text">
-                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="15px"
-                                    alt="">12:12</p>
-
-                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="15px"
-                                    alt="">12:/12/23</p>
-
-                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="15px"
-                                    alt="">Kumasi, Ghana</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 pt-4 d-flex justify-content-center">
-                <div class="card">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
-                    <div class="card-body">
-                        <h3 class="card-title">Charity for the needy</h3>
-                        <div style="display: flex;
-                        justify-content: space-around;" class="card-text">
-                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="15px"
-                                    alt="">12:12</p>
-
-                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="15px"
-                                    alt="">12:/12/23</p>
-
-                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="15px"
-                                    alt="">Kumasi, Ghana</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
-    </div>
 </section>
 <section class="counter-section" style="background-color: #8cb287;">
     <div class="container-fluid">

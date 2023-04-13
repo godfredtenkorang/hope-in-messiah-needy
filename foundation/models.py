@@ -2,12 +2,14 @@ from django.db import models
 import secrets
 from .paystack import PayStack
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 class Blog(models.Model):
     image = models.ImageField(upload_to='blog-img')
     title = models.CharField(max_length=100)
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.title
@@ -32,11 +34,11 @@ class Event(models.Model):
         return self.title
     
 class Galary(models.Model):
-    image = models.ImageField(upload_to='galary-img')
-    date = models.DateTimeField(auto_now_add=True)
+    image = models.ImageField(upload_to='galary-img', default='')
+    date = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
-        return self.image
+        return str(self.image)
     
 class HomeBlog(models.Model):
     image = models.ImageField(upload_to='homeblog-img')
