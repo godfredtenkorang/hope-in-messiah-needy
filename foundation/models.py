@@ -1,7 +1,71 @@
 from django.db import models
 import secrets
 from .paystack import PayStack
+from django.utils import timezone
 
+class Blog(models.Model):
+    image = models.ImageField(upload_to='blog-img')
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    date_posted = models.DateTimeField(default=timezone.now)
+    
+    def __str__(self):
+        return self.title
+    
+class Contact(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=15)
+    message = models.TextField()
+    
+    def __str__(self):
+        return self.name
+
+class Event(models.Model):
+    image = models.ImageField(upload_to='event-img')
+    title = models.CharField(max_length=100)
+    start_time = models.DateTimeField(default=timezone.now)
+    start_date = models.DateTimeField(default=timezone.now)
+    location = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.title
+    
+class Galary(models.Model):
+    image = models.ImageField(upload_to='galary-img')
+    date = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return self.image
+    
+class HomeBlog(models.Model):
+    image = models.ImageField(upload_to='homeblog-img')
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    date_posted = models.DateTimeField(default=timezone.now)
+    
+    def __str__(self):
+        return self.title
+    
+class HomeEvent(models.Model):
+    image = models.ImageField(upload_to='homeevent-img')
+    title = models.CharField(max_length=100)
+    start_time = models.DateTimeField(default=timezone.now)
+    start_date = models.DateTimeField(default=timezone.now)
+    location = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.title
+    
+class LatestCause(models.Model):
+    image = models.ImageField(upload_to='latestCause-img')
+    title = models.CharField(max_length=100)
+    value = models.IntegerField()
+    amount_raised = models.FloatField()
+    amount_goal = models.FloatField()
+    
+    def __str__(self):
+        return self.title
 
 class Payment(models.Model):
     amount = models.PositiveBigIntegerField()
