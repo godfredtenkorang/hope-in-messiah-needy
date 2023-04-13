@@ -1,0 +1,375 @@
+{% extends 'foundation/base.html' %}
+{% load static %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'foundation/foundation.css' %}">
+{% endblock %}
+{% block content %}
+<section class="pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="intro-content">
+                        <h1 style="font-family: 'Merriweather', serif;">HOPE IN MESSIAH NEEDY</h1>
+                        <p>We are more concern in changing the world by giving what God has given you.</p>
+                    <div>
+                        <a class="btn btn-outline-secondary" href="{% url 'donate' %}">Donate</a>
+                        <small>+1 000 0000 000</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-none d-md-block">
+                <div class="intro-img">
+                    <img class="rounded-circle" src="{% static 'foundation/images/donate222.jpeg' %}" height="300px"
+                        width="300px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-4" style="background-color: #D8D8D8">
+    <div class="four">
+        <h1 class="heading-title"><span>WHAT WE DO</span>We Are In The Mission <br> To <em>Help</em>The Helpless </h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 pt-4 pb-4">
+                <div class="text-center">
+                    <img src="{% static 'foundation/images/donate.png' %}" height="50px" alt="">
+                    <h2>Needy and Widows</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, accusamus!</p>
+                </div>
+            </div>
+            <div class="col-md-4 pt-4 pb-4">
+                <div class="text-center">
+                    <img src="{% static 'foundation/images/physical.png' %}" height="50px" alt="">
+                    <h2>Physically Challenged</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, accusamus!</p>
+                </div>
+            </div>
+            <div class="col-md-4 pt-4 pb-4">
+                <div class="text-center">
+                    <img src="{% static 'foundation/images/church.png' %}" height="50px" alt="">
+                    <h2>Church Facility</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, accusamus!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-4 mt-4 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>About Our Foundation</h5>
+                <h1>We Are In The Mission <br> To Help The Helpless</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid nisi molestias explicabo qui labore
+                    atque assumenda veritatis ipsam vitae. Aut, autem quasi molestias blanditiis molestiae itaque iste
+                    consequatur quae iusto.</p>
+                <a class="btn btn-outline-secondary" href="{% url 'about' %}">About Us</a>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center pt-4">
+                <img src="{% static 'foundation/images/donate222.jpeg' %}" height="400px" width="470px" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-4 mt-4 pb-4" style="background-color: #eee;">
+    <div class="four">
+        <h1 class="heading-title"><span>WHAT WE DO</span>We Arrange Many Social Events<br> For <em>Charity</em>Donations
+        </h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 pt-4 d-flex justify-content-center">
+                <div class="card">
+                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title">Charity for the needy</h3>
+                        <div style="display: flex;
+                        justify-content: space-around;" class="card-text">
+                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="15px"
+                                    alt="">12:12</p>
+
+                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="15px"
+                                    alt="">12:/12/23</p>
+
+                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="15px"
+                                    alt="">Kumasi, Ghana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-4 d-flex justify-content-center">
+                <div class="card">
+                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title">Charity for the needy</h3>
+                        <div style="display: flex;
+                        justify-content: space-around;" class="card-text">
+                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="15px"
+                                    alt="">12:12</p>
+
+                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="15px"
+                                    alt="">12:/12/23</p>
+
+                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="15px"
+                                    alt="">Kumasi, Ghana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-4 d-flex justify-content-center">
+                <div class="card">
+                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title">Charity for the needy</h3>
+                        <div style="display: flex;
+                        justify-content: space-around;" class="card-text">
+                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="15px"
+                                    alt="">12:12</p>
+                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="15px"
+                                    alt="">12:/12/23</p>
+                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="15px"
+                                    alt="">Kumasi, Ghana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-4 d-flex justify-content-center">
+                <div class="card">
+                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="250px" alt="">
+                    <div class="card-body">
+                        <h3 class="card-title">Charity for the needy</h3>
+                        <div style="display: flex;
+                        justify-content: space-around;" class="card-text">
+                            <p class="card-para"><img src="{% static 'foundation/images/time.png' %}" height="15px"
+                                    alt="">12:12</p>
+
+                            <p class="card-para"><img src="{% static 'foundation/images/date.png' %}" height="15px"
+                                    alt="">12:/12/23</p>
+
+                            <p class="card-para"><img src="{% static 'foundation/images/location.png' %}" height="15px"
+                                    alt="">Kumasi, Ghana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-4 p-4">
+        <div class="four">
+            <h1 class="heading-title"><span>WHAT WE DO</span>Our Expert Team<br> Always <em>Ready</em> To Volunteer</h1>
+        </div>
+        <div class="row team-row pt-4">
+            <div class="column2">
+                <div class="team">
+                    <div class="team-img">
+                        <img class="team-image" src="{% static 'foundation/images/donate222.jpeg' %}" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2 class="h2">Pastor Dickson</h2>
+                        <h3 class="h3">Director of Operations</h3>
+                        <p></p>
+                        <div class="team-social">
+                            <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
+                            <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
+                            <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
+                            <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column2">
+                <div class="team">
+                    <div class="team-img">
+                        <img class="team-image" src="{% static 'foundation/images/donate222.jpeg' %}" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2 class="h2">Bishop Fred</h2>
+                        <h3 class="h3">Organiser</h3>
+                        <p></p>
+                        <div class="team-social">
+                            <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
+                            <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
+                            <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
+                            <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column2">
+                <div class="team">
+                    <div class="team-img">
+                        <img class="team-image" src="{% static 'foundation/images/donate222.jpeg' %}" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2 class="h2">Bishop Fred</h2>
+                        <h3 class="h3">Organiser</h3>
+                        <p></p>
+                        <div class="team-social">
+                            <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
+                            <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
+                            <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
+                            <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column2">
+                <div class="team">
+                    <div class="team-img">
+                        <img class="team-image" src="{% static 'foundation/images/donate222.jpeg' %}" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2 class="h2">Bishop Fred</h2>
+                        <h3 class="h3">Organiser</h3>
+                        <p></p>
+                        <div class="team-social">
+                            <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
+                            <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
+                            <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
+                            <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column2">
+                <div class="team">
+                    <div class="team-img">
+                        <img class="team-image" src="{% static 'foundation/images/donate222.jpeg' %}" alt="Team Image">
+                    </div>
+                    <div class="team-content">
+                        <h2 class="h2">Bishop Fred</h2>
+                        <h3 class="h3">Organiser</h3>
+                        <p></p>
+                        <div class="team-social">
+                            <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
+                            <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
+                            <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
+                            <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</section>
+<div class="slider" style="background-color:#eee">
+    <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+    <input type="radio" name="slider" title="slide2" class="slider__nav" />
+    <input type="radio" name="slider" title="slide3" class="slider__nav" />
+    <input type="radio" name="slider" title="slide4" class="slider__nav" />
+    <div class="slider__inner">
+        <div class="slider__contents"><img class="slider__image rounded-circle"
+                src="{% static 'foundation/images/donate222.jpeg' %}" height="150px" width="150px" alt="">
+            <h2 class="slider__caption">codepen</h2>
+            <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis
+                possimus illo quos, corporis minima!</p>
+        </div>
+        <div class="slider__contents"><img class="slider__image rounded-circle"
+                src="{% static 'foundation/images/donate222.jpeg' %}" height="150px" width="150px" alt="">
+            <h2 class="slider__caption">newspaper-o</h2>
+            <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis
+                possimus illo quos, corporis minima!</p>
+        </div>
+        <div class="slider__contents"><img class="slider__image rounded-circle"
+                src="{% static 'foundation/images/donate222.jpeg' %}" height="150px" width="150px" alt="">
+            <h2 class="slider__caption">television</h2>
+            <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis
+                possimus illo quos, corporis minima!</p>
+        </div>
+        <div class="slider__contents"><img class="slider__image rounded-circle"
+                src="{% static 'foundation/images/donate222.jpeg' %}" height="150px" width="150px" alt="">
+            <h2 class="slider__caption">diamond</h2>
+            <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis
+                possimus illo quos, corporis minima!</p>
+        </div>
+    </div>
+</div>
+<section class="pt-4">
+    <div class="four">
+        <h1 class="heading-title"><span>OUR RECENT BLOG</span> Latest News From <br> Our
+            <em>Recent</em> Blog
+        </h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 pt-4">
+                <div class="card">
+                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="350px" alt="">
+                    <div class="card-body">
+                        <h2 class="card-title">Hope in Messiah Needy</h2>
+                        <div class="card-text">
+                            <p>You can be with us</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 pt-4">
+                <div class="card">
+                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="350px" alt="">
+                    <div class="card-body">
+                        <h2 class="card-title">Hope in Messiah Needy</h2>
+                        <div class="card-text">
+                            <p>You can be with us</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 pt-4">
+                <div class="card">
+                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="350px" alt="">
+                    <div class="card-body">
+                        <h2 class="card-title">Hope in Messiah Needy</h2>
+                        <div class="card-text">
+                            <p>You can be with us</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="counter-section" style="background-color: #8cb287;">
+    <div class="container-fluid">
+        <div class="row about-row">
+            <div class="col-lg-12 counter-img">
+                <div class="column">
+                    <div class="card-img">
+                        <img src="{% static 'foundation/images/time.png' %}" height="50px" alt="icon">
+                        <h3 class="pt-3">2000+</h3>
+                        <p style="font-size: 20px; font-weight:bold;">Donations</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card-img">
+                        <img src="{% static 'foundation/images/time.png' %}" height="50px" alt="icon">
+                        <h3 class="pt-3">90+</h3>
+                        <p style="font-size: 20px; font-weight:bold;">Fund Raised</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card-img">
+                        <img src="{% static 'foundation/images/time.png' %}" height="50px" alt="icon">
+                        <h3 class="pt-3">400+</h3>
+                        <p style="font-size: 20px; font-weight:bold;">Life Saved</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card-img">
+                        <img src="{% static 'foundation/images/time.png' %}" height="50px" alt="icon">
+                        <h3 class="pt-3">500+</h3>
+                        <p style="font-size: 20px; font-weight:bold;">Happy People</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

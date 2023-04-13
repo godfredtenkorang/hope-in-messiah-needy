@@ -1,0 +1,51 @@
+{% extends 'foundation/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'foundation/foundation.css' %}">
+{% endblock %}
+{% block content %}
+<section class="myHeading pt-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="myTitle text-center">Donate Now</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="row">
+    <div class="col-md-6">
+      {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %} 
+      {% endif %}
+    </div>
+  </div>
+<section class="pt-4 mb-4">
+    <div class="four">
+        <h1 class="heading-title"><span>DONATION</span>Help Us <br> To <em>Reach</em> Our Goals</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 pt-5 d-flex justify-content-center">
+                    <img src="{% static 'foundation/images/charity-img.jpeg' %}" height="400px" width="500px" alt="">
+            </div>
+            <div class="col-md-6 pt-5">
+                <div class="align-items-center">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <h4>Enter Amount</h4>
+                        {{ payment_form|crispy }}
+                        <p>
+                            <input class="btn btn-outline-secondary" type="submit", value="submit">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
