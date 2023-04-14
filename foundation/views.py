@@ -80,7 +80,6 @@ def verify_payment(request: HttpRequest, ref: str) -> HttpResponse:
     verified = payment.verify_payment()
     if verified:
         messages.success(request, 'Verification Successful')
-        return redirect('home')
     else:
         messages.error(request, 'Verification Failed')
     return redirect('donate')
