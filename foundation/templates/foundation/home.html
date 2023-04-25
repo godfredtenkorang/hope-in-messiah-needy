@@ -2,25 +2,25 @@
 {% load static %}
 
 {% block css_files %}
-<link rel="stylesheet" href="{% static 'foundation/foundation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
 {% endblock %}
 {% block content %}
 <section class="pt-5 pb-4">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 pt-4">
                 <div class="intro-content">
-                    <h1 style="font-family: 'Merriweather', serif;">HOPE IN MESSIAH NEEDY</h1>
+                    <h1 style="font-family: 'Merriweather', serif;">HOPE IN MESSIAH NEEDY FOUNDATION</h1>
                     <p>We are more concern in changing the world by giving what God has given you.</p>
                     <div>
                         <a class="btn btn-outline-secondary" href="{% url 'donate' %}">Donate</a>
-                        <small>+1 000 0000 000</small>
+                        <small>+233 24 497 4409</small>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 d-none d-md-block">
+            <div class="col-md-6 d-none d-md-block pt-4">
                 <div class="intro-img">
-                    <img class="rounded-circle" src="{% static 'foundation/images/donate222.jpeg' %}" height="300px"
+                    <img class="rounded-circle" src="{% static 'foundation/images/donate333.jpeg' %}" height="300px"
                         width="300px" alt="">
                 </div>
             </div>
@@ -36,22 +36,22 @@
             <div class="col-md-4 pt-4 pb-4">
                 <div class="text-center">
                     <img src="{% static 'foundation/images/donate.png' %}" height="50px" alt="">
-                    <h2>Needy and Widows</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, accusamus!</p>
+                    <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;">Needy and Widows</h2>
+                    <p>We take special care for widows and the poor and needy. A person who is poor and widow are would be donated to help them.</p>
                 </div>
             </div>
             <div class="col-md-4 pt-4 pb-4">
                 <div class="text-center">
-                    <img src="{% static 'foundation/images/physical.png' %}" height="50px" alt="">
-                    <h2>Physically Challenged</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, accusamus!</p>
+                    <img src="{% static 'foundation/images/disabled.png' %}" height="50px" alt="">
+                    <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;">Physically Challenged</h2>
+                    <p>We take care for those who are unable to perform an activity independently with some donations to be able to sustain them.</p>
                 </div>
             </div>
             <div class="col-md-4 pt-4 pb-4">
                 <div class="text-center">
                     <img src="{% static 'foundation/images/church.png' %}" height="50px" alt="">
-                    <h2>Church Facility</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, accusamus!</p>
+                    <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;">Church Facility</h2>
+                    <p>Building a church, hall or any other building within whicb a church program, event or activity is carried out.</p>
                 </div>
             </div>
         </div>
@@ -61,15 +61,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h5>About Our Foundation</h5>
-                <h1>We Are In The Mission <br> To Help The Helpless</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid nisi molestias explicabo qui labore
-                    atque assumenda veritatis ipsam vitae. Aut, autem quasi molestias blanditiis molestiae itaque iste
-                    consequatur quae iusto.</p>
-                <a class="btn btn-outline-secondary" href="{% url 'about' %}">About Us</a>
+                <h5 class="about-topic">About Our Foundation</h5>
+                <h1 class="about-top">We Are In The Mission <br> To Help The Helpless</h1>
+                <p>Hope in messiah needy foundation is an independent social service functioning as a non-profit charity. Our charitable activities were motivated by the concern of high rate of poverty in some part of our country and the need to provide assistance.</p>
             </div>
             <div class="col-md-6 d-flex justify-content-center pt-4">
-                <img src="{% static 'foundation/images/donate222.jpeg' %}" height="400px" width="470px" alt="">
+                <img class="rounded-circle" src="{% static 'foundation/images/donate666.jpeg' %}" height="400px" width="400px" alt="">
             </div>
         </div>
     </div>
@@ -111,24 +108,6 @@
         <div class="column2">
             <div class="team">
                 <div class="team-img">
-                    <img class="team-image" src="{% static 'foundation/images/dickson.jpeg' %}" alt="Team Image">
-                </div>
-                <div class="team-content">
-                    <h2 class="h2">Pastor Dickson Kwasi Darko</h2>
-                    <h3 class="h3">Director of Operations</h3>
-                    <p></p>
-                    <div class="team-social">
-                        <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
-                        <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
-                        <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
-                        <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="column2">
-            <div class="team">
-                <div class="team-img">
                     <img class="team-image" src="{% static 'foundation/images/boahene.jpeg' %}" alt="Team Image">
                 </div>
                 <div class="team-content">
@@ -151,8 +130,26 @@
                     <img class="team-image" src="{% static 'foundation/images/christy.jpeg' %}" alt="Team Image">
                 </div>
                 <div class="team-content">
-                    <h2 class="h2">Miss Christiana Adu-Boahene</h2>
+                    <h2 class="h2">Christiana Adu-Boahene</h2>
                     <h3 class="h3">Assisted Director</h3>
+                    <p></p>
+                    <div class="team-social">
+                        <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
+                        <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
+                        <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
+                        <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column2">
+            <div class="team">
+                <div class="team-img">
+                    <img class="team-image" src="{% static 'foundation/images/dickson.jpeg' %}" alt="Team Image">
+                </div>
+                <div class="team-content">
+                    <h2 class="h2">Pastor Dickson Kwasi Darko</h2>
+                    <h3 class="h3">Director of Operations</h3>
                     <p></p>
                     <div class="team-social">
                         <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
@@ -184,11 +181,11 @@
         <div class="column2">
             <div class="team">
                 <div class="team-img">
-                    <img class="team-image" src="{% static 'foundation/images/donate222.jpeg' %}" alt="Team Image">
+                    <img class="team-image" src="{% static 'foundation/images/bishop.jpeg' %}" alt="Team Image">
                 </div>
                 <div class="team-content">
-                    <h2 class="h2">Bishop Fred</h2>
-                    <h3 class="h3">Organiser</h3>
+                    <h2 class="h2">Bishop Fred Bimpong</h2>
+                    <h3 class="h3">Field Coordinator</h3>
                     <p></p>
                     <div class="team-social">
                         <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
@@ -210,28 +207,28 @@
     <input type="radio" name="slider" title="slide4" class="slider__nav" />
     <div class="slider__inner">
         <div class="slider__contents"><img class="slider__image rounded-circle"
-                src="{% static 'foundation/images/donate222.jpeg' %}" height="150px" width="150px" alt="">
-            <h2 class="slider__caption">codepen</h2>
-            <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis
-                possimus illo quos, corporis minima!</p>
+                src="{% static 'foundation/images/godfred.jpg' %}" height="150px" width="150px" alt="">
+            <h2 class="slider__caption">Godfred Tenkorang</h2>
+            <p>Web Developer</p>
+            <p class="slider__txt">I have known Hope in Messiah Needy Foundation for some years now and they are reliable and always ready to have you.</p>
         </div>
         <div class="slider__contents"><img class="slider__image rounded-circle"
-                src="{% static 'foundation/images/donate222.jpeg' %}" height="150px" width="150px" alt="">
-            <h2 class="slider__caption">newspaper-o</h2>
-            <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis
-                possimus illo quos, corporis minima!</p>
+                src="{% static 'foundation/images/juliet.jpg' %}" height="150px" width="150px" alt="">
+            <h2 class="slider__caption">Juliet O. Afriyie</h2>
+            <p>Student</p>
+            <p class="slider__txt">If you are looking for the right NGO company to tell them all your problems, Hope in Messiah Needy is always here to help you.</p>
         </div>
         <div class="slider__contents"><img class="slider__image rounded-circle"
-                src="{% static 'foundation/images/donate222.jpeg' %}" height="150px" width="150px" alt="">
-            <h2 class="slider__caption">television</h2>
-            <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis
-                possimus illo quos, corporis minima!</p>
+                src="{% static 'foundation/images/bishop.jpeg' %}" height="150px" width="150px" alt="">
+            <h2 class="slider__caption">Bishop Fred</h2>
+            <p>Field Coordinator</p>
+            <p class="slider__txt">I have worked with Hope in Messiah Needy Foundation which I have never regrated but being motivated to help others to come out from their mess.</p>
         </div>
         <div class="slider__contents"><img class="slider__image rounded-circle"
-                src="{% static 'foundation/images/donate222.jpeg' %}" height="150px" width="150px" alt="">
-            <h2 class="slider__caption">diamond</h2>
-            <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis
-                possimus illo quos, corporis minima!</p>
+                src="{% static 'foundation/images/boahene.jpeg' %}" height="150px" width="150px" alt="">
+            <h2 class="slider__caption">Adu-Boahene</h2>
+            <p>Director</p>
+            <p class="slider__txt">We were very excited to have Charity Escapes involved with our Courageous Kids Awards. The door is open to hear you out.</p>
         </div>
     </div>
 </div>
@@ -259,7 +256,7 @@
         </div>
     </div>
 </section>
-<section class="counter-section" style="background-color: #8cb287;">
+<section class="counter-section" style="background-color: #000;">
     <div class="container-fluid">
         <div class="row about-row">
             <div class="col-lg-12 counter-img">

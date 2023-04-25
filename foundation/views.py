@@ -39,7 +39,7 @@ def social_event(request):
 
 def blog(request):
     blogs = Blog.objects.order_by("-date_posted")
-    galaries = Galary.objects.all()
+    galaries = Gallery.objects.all()
     context = {
         'blogs': blogs,
         'galaries': galaries,

@@ -1,7 +1,7 @@
 {% extends 'foundation/base.html' %}
 {% load static %}
 {% block css_files %}
-<link rel="stylesheet" href="{% static 'foundation/foundation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
 {% endblock %}
 {% block content %}
 <section class="myHeading pt-4 mt-5">
@@ -15,35 +15,34 @@
 </section>
 <div class="row">
     <div class="col-md-12">
-      {% if messages %}
-       {% for message in messages %}
-      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-      {% endfor %}
-       {% endif %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+        {% endif %}
     </div>
-  </div>
+</div>
 <section style="overflow: hidden;">
     <div class="container">
         <div class="col-md-12">
             <div class="mapouter">
-                <div class="gmap_canvas"><iframe width="1024" height="500" id="gmap_canvas"
-                        src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
-                        href="https://123movies-to.org"></a><br>
+                <div class="gmap_canvas"><iframe width="1040" height="500" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=Kronum%20Ashanti%20Region&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br>
                     <style>
                         .mapouter {
                             position: relative;
                             text-align: right;
                             height: 500px;
-                            width: 1024px;
+                            width: 1040px;
                         }
-                    </style><a href="https://www.embedgooglemap.net"></a>
+                    </style><a href="https://www.embedgooglemap.net">embed google map</a>
                     <style>
                         .gmap_canvas {
                             overflow: hidden;
                             background: none !important;
                             height: 500px;
-                            width: 1024px;
+                            width: 1040px;
                         }
                     </style>
                 </div>
@@ -57,12 +56,9 @@
             <em>Hear</em> From You
         </h1>
     </div>
-
     <div class="contact-wrapper">
-
         <!-- Left contact page -->
-
-        <form method="POST" class="form-horizontal">
+        <form method="POST" id="contact-form" class="form-horizontal">
             {% csrf_token %}
             <div class="form-group">
                 <div class="col-sm-12">
@@ -81,27 +77,26 @@
                         required>
                 </div>
             </div>
-            <textarea class="form-control" rows="6" placeholder="MESSAGE" id="message" name="message" required></textarea>
+            <textarea class="form-control" rows="6" placeholder="MESSAGE" id="message" name="message"
+                required></textarea>
             <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
                 <div class="alt-send-button">
                     <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
                 </div>
             </button>
         </form>
-
         <!-- Left contact page -->
-
         <div class="direct-contact-container">
             <ul class="contact-list">
-                <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City,
-                            State</span></i></li>
+                <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Kronum,
+                            Ashanti Region</span></i></li>
                 <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a
-                                href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+                                href="tel:+233244974409" title="Give me a call">+233 24 497 4409</a></span></i>
+                </li>
                 <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a
-                                href="mailto:#" title="Send me an email">hitmeup@gmail.com</a></span></i></li>
-
+                                href="mailto:Hopeinmessiahneedyfoundation@gmail.com"
+                                title="Send me an email">hopeinmessiahneedy<br>foundation@gmail.com</a></span></i></li>
             </ul>
-
             <hr>
             <ul class="social-media-list">
                 <li><a href="#" target="_blank" class="contact-icon">
@@ -119,8 +114,6 @@
             </ul>
             <hr>
         </div>
-
     </div>
-
 </section>
 {% endblock %}

@@ -33,7 +33,7 @@ class Event(models.Model):
     def __str__(self):
         return self.title
     
-class Galary(models.Model):
+class Gallery(models.Model):
     image = models.ImageField(upload_to='galary-img', default='')
     date = models.DateTimeField(default=timezone.now)
     

@@ -1,8 +1,8 @@
 {% extends 'foundation/base.html' %}
 {% load static %}
 {% block css_files %}
-<link rel="stylesheet" href="{% static 'foundation/foundation.css' %}">
-{% endblock %}
+    <link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
+{% endblock css_files %}
 {% block content %}
 <section class="myHeading pt-4 mt-5">
     <div class="container">
@@ -17,15 +17,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h5>About Our Foundation</h5>
-                <h1>We Are In The Mission <br> To Help The Helpless</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid nisi molestias explicabo qui labore
-                    atque assumenda veritatis ipsam vitae. Aut, autem quasi molestias blanditiis molestiae itaque iste
-                    consequatur quae iusto.</p>
-                <a class="btn btn-outline-secondary" href="">Make a Call</a>
+                <h5 class="about-topic">About Our Foundation</h5>
+                <h1 class="about-top">We Are In The Mission <br> To Help The Helpless</h1>
+                <p>Hope in messiah needy foundation is an independent social service functioning as a non-profit charity. Our charitable activities were motivated by the concern of high rate of poverty in some part of our country and the need to provide assistance.</p>
             </div>
             <div class="col-md-6 d-flex justify-content-center pt-4">
-                <img class="rounded-circle" src="{% static 'foundation/images/donate222.jpeg' %}" height="450px" width="450px" alt="">
+                <img class="rounded-circle" src="{% static 'foundation/images/donate666.jpeg' %}" height="350px" width="350px" alt="">
             </div>
         </div>
     </div>
@@ -35,24 +32,24 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="service">
-                    <h1 style="color:blue; font-weight:900">01</h1>
-                    <h5 class="pt-2 pl-3">Needy and Widows</h5>
+                    <h1 style="color:#F0A04B; font-weight:900; font-family: 'Merriweather Sans', sans-serif;">01</h1>
+                    <h5 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;" class="pt-2 pl-3">Needy and Widows</h5>
                 </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis excepturi, assumenda illo consequatur, in ipsum commodi esse voluptatem hic harum dignissimos ab voluptas dolores. Accusantium mollitia itaque voluptatem eveniet at.</p>
+                    <p>We take special care for widows and the poor and needy. A person who is poor and widow are would be donated to help them.</p>
             </div>
             <div class="col-md-4">
                 <div class="service">
-                    <h1 style="color:blue; font-weight:900">02</h1>
-                    <h5 class="pt-2 pl-3">Physically Challenged</h5>
+                    <h1 style="color:#F0A04B; font-weight:900; font-family: 'Merriweather Sans', sans-serif;">02</h1>
+                    <h5 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;" class="pt-2 pl-3">Physically Challenged</h5>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis excepturi, assumenda illo consequatur, in ipsum commodi esse voluptatem hic harum dignissimos ab voluptas dolores. Accusantium mollitia itaque voluptatem eveniet at.</p>
+                <p>We take care for those who are unable to perform an activity independently with some donations to be able to sustain them.</p>
             </div>
             <div class="col-md-4">
                 <div class="service">
-                    <h1 style="color:blue; font-weight:900">03</h1>
-                    <h5 class="pt-2 pl-3">Church Facility</h5>
+                    <h1 style="color:#F0A04B; font-weight:900; font-family: 'Merriweather Sans', sans-serif;">03</h1>
+                    <h5 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;" class="pt-2 pl-3">Church Facility</h5>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis excepturi, assumenda illo consequatur, in ipsum commodi esse voluptatem hic harum dignissimos ab voluptas dolores. Accusantium mollitia itaque voluptatem eveniet at.</p>
+                <p>Building a church, hall or any other building within whicb a church program, event or activity is carried out.</p>
             </div>
         </div>
     </div>
@@ -61,12 +58,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 d-none d-md-block">
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="350px" alt="">
+                    <img src="{% static 'foundation/images/donate111.jpeg' %}" height="300px" width="500px" alt="">
             </div>
             <div class="col-md-6">
                 <div>
-                    <h2>Mision</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id nam aperiam ipsum nobis quidem cum, accusantium veniam non ex reiciendis, eos reprehenderit maiores, tempora repudiandae dignissimos fuga hic quibusdam ipsam!</p>
+                    <h1 class="about-title">Vision</h1>
+                    <h4 class="about-content">The vision of Hope in Messiah Needy Foundation is to provide medical support to the Needy, portable water to destitute area, aid to the Needy society and help orphans and persons with physical disabilities.</h4>
                 </div>
             </div>
         </div>
@@ -75,32 +72,35 @@
 <section class="pt-4">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6 pt-4">
                 <div>
-                    <h2>Vision</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id nam aperiam ipsum nobis quidem cum, accusantium veniam non ex reiciendis, eos reprehenderit maiores, tempora repudiandae dignissimos fuga hic quibusdam ipsam!</p>
+                    <h1 class="about-title">Mission</h1>
+                    <h4 class="about-content">The Hope in messiah needy foundation mission is to provide medical support to those in need, as well as portable water to communities in need, assistance to the Needy in society and assistance to those with physical disabilities and orphanages and showing them how Jesus Christ love Us.</h4>
                 </div>
             </div>
-            <div class="col-md-6 d-none d-md-block">
+            <div class="col-md-6 d-none d-md-block pt-4">
                 <div>
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="350px" alt="">
+                    <img src="{% static 'foundation/images/donate444.jpeg' %}" height="300px" width="500px" alt="">
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section class="pt-4">
+<section class="pt-4 pb-4">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 d-none d-md-block">
+            <div class="col-md-6 d-none d-md-block pt-4">
                 <div>
-                    <img src="{% static 'foundation/images/donate222.jpeg' %}" height="350px" alt="">
+                    <img src="{% static 'foundation/images/donate555.jpeg' %}" height="300px" width="500px" alt="">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 pt-4">
                 <div>
-                    <h2>Goals</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id nam aperiam ipsum nobis quidem cum, accusantium veniam non ex reiciendis, eos reprehenderit maiores, tempora repudiandae dignissimos fuga hic quibusdam ipsam!</p>
+                    <h1 class="about-title">Goals</h1>
+                    <h4 class="about-content">1. Assisting those in need with medical care in depraved area <br>
+                        2. Providing communities in need with portable water <br>
+                        3. Providing assistance to those who are in need in society concerning their education <br>
+                        4. Assist those with physical disabilities as well as orphans</h4>
                 </div>
             </div>
             

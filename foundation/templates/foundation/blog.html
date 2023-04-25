@@ -1,7 +1,7 @@
 {% extends 'foundation/base.html' %}
 {% load static %}
 {% block css_files %}
-<link rel="stylesheet" href="{% static 'foundation/foundation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
 {% endblock %}
 {% block content %}
 <section class="myHeading pt-4 mt-5">
@@ -31,11 +31,11 @@
                 </article>
             </div>
             {% endfor %}
-            <div class="col-md-4 pt-4">
-                <h3>Galary</h3>
+            <div class="col-lg-4 pt-4">
+                <h3 style="font-family: 'Merriweather Sans', sans-serif;" class="text-center">Gallery</h3>
                 {% for galary in galaries %}
-                <div>
-                    <img class="pb-3 d-flex justify-content-center" src="{{ galary.image.url }}" height="300px" width="400px" alt="">
+                <div class="text-center">
+                    <img class="pb-3" src="{{ galary.image.url }}" height="300px" width="300px" alt="">
                 </div>
                 {% endfor %}
             </div>

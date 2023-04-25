@@ -1,7 +1,7 @@
 {% extends 'foundation/base.html' %}
 {% load static %}
 {% block css_files %}
-<link rel="stylesheet" href="{% static 'foundation/foundation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
 {% endblock %}
 {% block content %}
 <section class="myHeading pt-4 mt-5">
@@ -20,9 +20,9 @@
     </div>
         <div class="row">
             {% for social in social_events %}
-            <div class="col-md-3 pt-4 d-flex justify-content-center">
+            <div class="col-md-4 pt-4 d-flex justify-content-center">
                 <div class="card">
-                    <img src="{{ social.image.url }}" height="300px" alt="">
+                    <img src="{{ social.image.url }}" height="300px" width="350px" alt="">
                     <div class="card-body">
                         <h3 class="card-title">{{ social.title }}</h3>
                         <div style="display: flex;
@@ -42,7 +42,7 @@
             {% endfor %}
         </div>
 </section>
-<section class="counter-section" style="background-color: #8cb287;">
+<section class="counter-section" style="background-color: #000;">
     <div class="container-fluid">
         <div class="row about-row">
             <div class="col-lg-12 counter-img">
