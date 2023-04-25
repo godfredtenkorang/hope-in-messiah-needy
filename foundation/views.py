@@ -2,6 +2,7 @@ from django.http import HttpRequest
 from django.shortcuts import render, HttpResponse, get_object_or_404, redirect
 from . import forms
 from django.conf import settings
+from django.views.generic import ListView
 from .models import *
 from django.contrib import messages
 
@@ -47,6 +48,13 @@ def blog(request):
     }
     return render(request, 'foundation/blog.html', context)
 
+class PostListView(ListView):
+    model = Blog
+    template_name = 'foundation/blog.html'
+    context_object_name = 'blogs'
+    ordering = ['-date_posted']
+    paginate_by = 5
+    
 def contact(request):
     if request.method == 'POST':
         name = request.POST['name']
