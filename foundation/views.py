@@ -10,9 +10,11 @@ from django.contrib import messages
 def home(request):
     posts = HomeBlog.objects.order_by("-date_posted")
     events = HomeEvent.objects.order_by("-start_date")
+    galleries = Gallery.objects.all()
     context = {
         'posts': posts,
-        'events': events
+        'events': events,
+        'galleries': galleries
     }
     return render(request, 'foundation/home.html', context)
 
@@ -40,10 +42,8 @@ def social_event(request):
 
 def blog(request):
     blogs = Blog.objects.order_by("-date_posted")
-    galaries = Gallery.objects.all()
     context = {
         'blogs': blogs,
-        'galaries': galaries,
         'title': 'Blogs'
     }
     return render(request, 'foundation/blog.html', context)

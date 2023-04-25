@@ -257,6 +257,22 @@
         </div>
     </div>
 </section>
+<section class="pt-4 pb-4" style="background-color: #eee;">
+    <div class="four">
+        <h1 class="heading-title"><span>GALLERY</span>These Are <br> Some <em>Photos</em> Of Our Events</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for gallery in galleries %}
+            <div class="col-md-4 pt-4">
+                <div>
+                    <img src="{{ gallery.image.url }}" height="300px" width="350px" alt="">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 <section class="counter-section" style="background-color: #000;">
     <div class="container-fluid">
         <div class="row about-row">
