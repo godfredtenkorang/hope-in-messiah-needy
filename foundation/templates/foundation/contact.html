@@ -58,7 +58,7 @@
     </div>
     <div class="contact-wrapper">
         <!-- Left contact page -->
-        <form method="POST" id="contact-form" class="form-horizontal">
+        <form method="POST" class="form-horizontal">
             {% csrf_token %}
             <div class="form-group">
                 <div class="col-sm-12">
@@ -77,8 +77,8 @@
                         required>
                 </div>
             </div>
-            <textarea class="form-control" rows="6" placeholder="MESSAGE" id="message" name="message"
-                required></textarea>
+            <textarea class="form-control" rows="6" placeholder="MESSAGE" id="message" name="message" required>
+            </textarea>
             <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
                 <div class="alt-send-button">
                     <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
@@ -99,16 +99,16 @@
             </ul>
             <hr>
             <ul class="social-media-list">
-                <li><a href="#" target="_blank" class="contact-icon">
+                <li><a href="facebook.com" class="contact-icon">
                         <i class="fa fa-github" aria-hidden="true"></i></a>
                 </li>
-                <li><a href="#" target="_blank" class="contact-icon">
+                <li><a href="#" class="contact-icon">
                         <i class="fa fa-codepen" aria-hidden="true"></i></a>
                 </li>
-                <li><a href="#" target="_blank" class="contact-icon">
+                <li><a href="#" class="contact-icon">
                         <i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </li>
-                <li><a href="#" target="_blank" class="contact-icon">
+                <li><a href="#" class="contact-icon">
                         <i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </li>
             </ul>

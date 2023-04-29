@@ -1,0 +1,32 @@
+{% extends 'foundation/base.html' %}
+{% load static %}
+{% block css_files %}
+<link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
+{% endblock %}
+{% block content %}
+<section class="myHeading pt-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="myTitle text-center">Blog Details</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                    <div class="card mb-4 blog-section">
+                        <img class="card-img-top" src="{{ object.image.url }}" height="350px" alt="Card image cap">
+                        <div class="card-body">
+                        <h3 class="card-title blog-title">{{ object.title }}</h3>
+                        <p class="card-text">{{ object.content }}</p>
+                        <p class="card-text"><small class="text-muted">Posted on: {{ object.date_posted|date:"N, m o" }}</small></p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

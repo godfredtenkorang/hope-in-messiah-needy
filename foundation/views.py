@@ -2,7 +2,7 @@ from django.http import HttpRequest
 from django.shortcuts import render, HttpResponse, get_object_or_404, redirect
 from . import forms
 from django.conf import settings
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from .models import *
 from django.contrib import messages
 
@@ -55,6 +55,10 @@ class PostListView(ListView):
     ordering = ['-date_posted']
     paginate_by = 5
     
+class PostDetailView(DetailView):
+    model = Blog
+    
+    
 def contact(request):
     if request.method == 'POST':
         name = request.POST['name']
@@ -63,11 +67,20 @@ def contact(request):
         message = request.POST['message']
         contact = Contact(name=name, email=email, phone=phone, message=message)
         contact.save()
-        messages.info(request, "Your form has been submitted")
+        messages.success(request, "Your form has been submitted")
+        return render(request, 'foundation/contact.html')
     context = {
         'title': 'Contact Us'
     }
     return render(request, 'foundation/contact.html', context)
+
+def gallery(request):
+    galleries = Gallery.objects.order_by('-date')
+    context = {
+        'galleries': galleries,
+        'tttle': 'Gallery'
+    }
+    return render(request, 'foundation/gallery.html', context)
 
 def donate(request: HttpRequest) -> HttpResponse:
     if request.method == 'POST':

@@ -1,0 +1,32 @@
+{% extends 'foundation/base.html' %}
+{% load static %}
+{% block css_files %}
+<link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
+{% endblock %}
+{% block content %}
+<section class="myHeading pt-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="myTitle text-center">Gallery</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-4 pb-4" style="background-color: #cbd1d3;">
+    <div class="four">
+        <h1 class="heading-title"><span>GALLERY</span>These Are <br> Some <em>Photos</em> Of Our Events</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            {% for gallery in galleries %}
+            <div class="col-lg-3 col-md-6 mt-4 d-flex justify-content-center">
+                <div>
+                    <img src="{{ gallery.image.url }}" height="300px" width="100%" alt="gallery">
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -87,6 +87,101 @@
     position: relative;
   }
   /*-------------Counter End--------------*/
+
+  .blog-section {
+    box-shadow: 2px 10px 10px #eee;
+   }
+  .blog-title {
+    color: #000;
+    font-weight: 700;
+  }
+  .blog-title:hover {
+    text-decoration: none;
+    color: #210062;
+  }
+  /* ------------All Titles start ----------*/
+  
+  /* === BASE HEADING === */
+
+  .heading-title {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+  }
+
+  .heading-title span {
+    display: block;
+    font-size: 0.5em;
+    line-height: 1.3;
+  }
+
+  .heading-title em {
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* === HEADING STYLE #4 === */
+  .four h1 {
+    text-align: center;
+    padding-bottom: 0.7em;
+  }
+
+  .four h1 span {
+    font-weight: 300;
+    word-spacing: 3px;
+    line-height: 2em;
+    padding-bottom: 0.35em;
+    color: #F0A04B;
+  }
+
+  .four h1:before {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 1px;
+    content: "";
+    left: 50%;
+    margin-left: -30px;
+    background-color: #777;
+  }
+
+  /* ------------All Titles close ----------*/
+
+    /*--------------progress start------------------ */
+
+    #progress {
+      position: fixed;
+      bottom: 20px;
+      right: 10px;
+      height: 70px;
+      width: 70px;
+      display: none;
+      place-items: center;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+    #progress-value {
+      display: block;
+      height: calc(100% - 15px);
+      width: calc(100% - 15px);
+      background-color: #fff;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 35px;
+      color: #001a2e;
+    }
+     /*--------------progress close------------------ */
+  
 </style>
 
 <body>
@@ -96,7 +191,7 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'foundation/images/needy-logo.png' %}" height="70px" alt=""></a>
-      
+      <span style="font-size: 25px; color: #210062; font-family: Merriweather; font-weight:600;" class="d-none d-md-block">Hope In Needy <br> Foundation</span>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -117,6 +212,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'contact' %}">Contact</a>
@@ -180,6 +278,8 @@
         
         window.onscroll = calcScrollValue;
         window.onload = calcScrollValue;
+
+        
       </script>
 
 </body>

@@ -10,7 +10,7 @@
         <div class="row">
             <div class="col-md-6 pt-4">
                 <div class="intro-content">
-                    <h1 style="font-family: 'Merriweather', serif;">HOPE IN MESSIAH NEEDY FOUNDATION</h1>
+                    <h1 style="font-family: 'Merriweather', serif; font-weight:800;">HOPE IN MESSIAH NEEDY FOUNDATION</h1>
                     <p>We are more concern in changing the world by giving what God has given you.</p>
                     <div>
                         <a class="btn btn-outline-secondary" href="{% url 'donate' %}">Donate</a>
@@ -29,13 +29,13 @@
 </section>
 <section class="pt-4" style="background-color: #D8D8D8">
     <div class="four">
-        <h1 class="heading-title"><span>WHAT WE DO</span>We Are In The Mission <br> To <em>Help</em>The Helpless </h1>
+        <h1 class="heading-title"><span>WHAT WE DO</span>We Are In The <br> Mission To <em>Help</em>The Helpless </h1>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-4 pt-4 pb-4">
                 <div class="text-center">
-                    <img src="{% static 'foundation/images/donate.png' %}" height="50px" alt="">
+                    <img src="{% static 'foundation/images/church.png' %}" height="50px" alt="">
                     <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;">Needy and Widows</h2>
                     <p>We take special care for widows and the poor and needy. A person who is poor and widow are would be donated to help them.</p>
                 </div>
@@ -62,25 +62,26 @@
         <div class="row">
             <div class="col-md-6">
                 <h5 class="about-topic">About Our Foundation</h5>
-                <h1 class="about-top">We Are In The Mission <br> To Help The Helpless</h1>
+                <h3 class="about-top">We Are In The Mission To Help The Helpless</h3>
                 <p>Hope in messiah needy foundation is an independent social service functioning as a non-profit charity. Our charitable activities were motivated by the concern of high rate of poverty in some part of our country and the need to provide assistance.</p>
                 <a class="btn btn-outline-secondary" href="{% url 'about' %}">About Us</a>
             </div>
             <div class="col-md-6 d-flex justify-content-center pt-4">
-                <img class="rounded-circle" src="{% static 'foundation/images/donate666.jpeg' %}" height="400px" width="400px" alt="">
+                <img class="rounded-circle" src="{% static 'foundation/images/donate666.jpeg' %}" height="350px" width="350px" alt="">
             </div>
         </div>
     </div>
 </section>
 <section class="pt-4 mt-4 pb-4 p-5" style="background-color: #eee;">
     <div class="four">
-        <h1 class="heading-title"><span>WHAT WE DO</span>We Arrange Many Social Events<br> For <em>Charity</em>Donations
+        <h1 class="heading-title"><span>WHAT WE DO</span>We Arrange Many Social  <br> Events For <em>Charity</em> Donations
         </h1>
     </div>
+    <div class="container">
     <div class="row">
         {% for event in events %}
-        <div class="col-md-3 pt-4 d-flex justify-content-center">
-            <div class="card">
+        <div class="col-lg-4 col-md-6 col-sm-12 pt-4 d-flex justify-content-center">
+            <div class="card" style="height: 100%;">
                 <img src="{{ event.image.url }}" height="300px" alt="">
                 <div class="card-body">
                     <h3 class="card-title">{{ event.title }}</h3>
@@ -100,6 +101,7 @@
         </div>
         {% endfor %}
     </div>
+</div>
 </section>
 <section class="pt-4 p-4">
     <div class="four">
@@ -115,13 +117,13 @@
                     <h2 class="h2">Director Adu-Boahene</h2>
                     <h3 class="h3">Director</h3>
                     <p></p>
-                    <div class="team-social">
+                    <!-- <div class="team-social">
                         <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
                         <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
                         <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
                         <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
 
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -134,12 +136,12 @@
                     <h2 class="h2">Christiana Adu-Boahene</h2>
                     <h3 class="h3">Assisted Director</h3>
                     <p></p>
-                    <div class="team-social">
+                    <!-- <div class="team-social">
                         <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
                         <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
                         <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
                         <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -152,12 +154,13 @@
                     <h2 class="h2">Pastor Dickson Kwasi Darko</h2>
                     <h3 class="h3">Director of Operations</h3>
                     <p></p>
-                    <div class="team-social">
+                    <!-- <div class="team-social">
                         <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
                         <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
                         <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
-                        <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-                    </div>
+                        <a href="" class="social-in"> <i class="fa
+                            fa-instagram"></i></a>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -170,12 +173,12 @@
                     <h2 class="h2">Miss Adjei Roberta</h2>
                     <h3 class="h3">Secretary</h3>
                     <p></p>
-                    <div class="team-social">
+                    <!-- <div class="team-social">
                         <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
                         <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
                         <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
                         <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -188,13 +191,13 @@
                     <h2 class="h2">Bishop Fred Bimpong</h2>
                     <h3 class="h3">Field Coordinator</h3>
                     <p></p>
-                    <div class="team-social">
+                    <!-- <div class="team-social">
                         <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
                         <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
                         <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
                         <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
 
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -233,7 +236,7 @@
         </div>
     </div>
 </div>
-<section class="pt-4">
+<section class="pt-4 pb-4">
     <div class="four">
         <h1 class="heading-title"><span>OUR RECENT BLOG</span> Latest News From <br> Our
             <em>Recent</em> Blog
@@ -243,7 +246,7 @@
         <div class="row">
             {% for post in posts %}
                 <div class="col-md-4 pt-4">
-                    <div class="card">
+                    <div class="card blog-section" style="height:100%">
                         <img src="{{ post.image.url }}" height="350px" alt="">
                         <div class="card-body">
                             <h2 class="card-title">{{ post.title }}</h2>
@@ -253,22 +256,6 @@
                         </div>
                     </div>
                 </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-<section class="pt-4 pb-4" style="background-color: #eee;">
-    <div class="four">
-        <h1 class="heading-title"><span>GALLERY</span>These Are <br> Some <em>Photos</em> Of Our Events</h1>
-    </div>
-    <div class="container">
-        <div class="row">
-            {% for gallery in galleries %}
-            <div class="col-md-4 pt-4">
-                <div>
-                    <img src="{{ gallery.image.url }}" height="300px" width="350px" alt="">
-                </div>
-            </div>
             {% endfor %}
         </div>
     </div>
