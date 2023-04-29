@@ -1,5 +1,6 @@
 from django.http import HttpRequest
 from django.shortcuts import render, HttpResponse, get_object_or_404, redirect
+from django.urls import reverse
 from . import forms
 from django.conf import settings
 from django.views.generic import ListView, DetailView
@@ -58,6 +59,29 @@ class PostListView(ListView):
 class PostDetailView(DetailView):
     model = Blog
     
+    form = forms.CommentForm
+    
+    def post(self, request, *args, **kwargs):
+        form = forms.CommentForm(request.POST)
+        if form.is_valid():
+            post = self.get_object()
+            form.instance.post = post
+            form.save()
+            
+            return redirect(reverse("blog-detail", kwargs={
+                'pk': post.pk
+            }))
+    
+    def get_context_data(self, **kwargs):
+        post_comments_count = Comment.objects.all().filter(post=self.object.id).count()
+        post_comments = Comment.objects.all().filter(post=self.object.id)
+        context = super().get_context_data(**kwargs)
+        context.update({
+            'form': self.form,
+            'post_comments': post_comments,
+            'post_comments_count': post_comments_count
+        })
+        return context
     
 def contact(request):
     if request.method == 'POST':

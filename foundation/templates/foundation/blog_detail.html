@@ -29,4 +29,37 @@
         </div>
     </div>
 </section>
+<!-- --------Comments----------- -->
+<section>
+    <div class="container">
+        <h2>Comments({{ post_comments_count }})</h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Display Comment -->
+                <div class="media-list">
+                    {% for comment in post_comments %}
+                    <div>
+                        <img class="avatar avatar-sm mr-4" src="{% static 'foundation/images/avator.png' %}" height="30px" alt="">
+                        <div class="media-body">
+                            <div class="small-1">
+                                <b>{{ comment.username }}</b>
+                                <time class="ml-4 opacity-70 small-3">{{ comment.date }}</time>
+                            </div>
+                            <p>{{ comment.content }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- Display the Form -->
+                <form class="pb-4" method="POST" action="{% url 'blog-detail' pk=blog.id %}">
+                    {% csrf_token %}
+                    <div class="form-group pt-4">
+                        {{ form }}
+                    </div>
+                    <button class="btn btn-outline-secondary" type="submit">Comment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
