@@ -37,7 +37,7 @@
                     <form method="POST">
                         {% csrf_token %}
                         <h4>Enter Amount</h4>
-                        {{ payment_form }}
+                        {{ payment_form|crispy }}
                         <p>
                             <input class="btn btn-outline-secondary" type="submit", value="submit">
                         </p>
