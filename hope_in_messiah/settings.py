@@ -14,6 +14,7 @@ import os
 
 from pathlib import Path
 
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-1bgm*_7+831xs2deemlufo52sx^k03+wrql&)k(a5h616qni6c'
+SECRET_KEY = config("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config("DEBUG", cast=bool)
 
 ALLOWED_HOSTS = ['.himfoundation.net','157.245.247.173', 'localhost','127.0.0.1']
 
@@ -139,8 +140,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-PAYSTACK_SECRET_KEY = 'sk_live_cdf59a62de7735fc6e5d705dca5822738920f5e7'
-PAYSTACK_PUBLIC_KEY = 'pk_live_68dd2b910dbfd5bf284c5f44627b446cf61f6b65'
+PAYSTACK_SECRET_KEY = config("PAYSTACK_SECRET_KEY")
+PAYSTACK_PUBLIC_KEY = config("PAYSTACK_PUBLIC_KEY")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
