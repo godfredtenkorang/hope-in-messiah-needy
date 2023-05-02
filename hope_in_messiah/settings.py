@@ -88,15 +88,16 @@ if DEBUG:
     
 else:
     DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hope_in_messiahdb',
-        'USER': 'hope',
-        'PASSWORD': 'gony@100',
-        'HOST': 'localhost',
-        'PORT': '',
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'hope_in_messiah',
+            'USER': 'hope_admin',
+            'PASSWORD': 'hope123456',
+            'HOST': 'localhost',
+            'PORT': '',
+        }
     }
-}
+
 
 
 # Password validation
