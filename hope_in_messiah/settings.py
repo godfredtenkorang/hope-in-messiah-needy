@@ -91,7 +91,7 @@ else:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'hope_in_messiahDB',
+        'NAME': 'hope_in_messiahdb',
         'USER': 'hope',
         'PASSWORD': 'gony@100',
         'HOST': 'localhost',
