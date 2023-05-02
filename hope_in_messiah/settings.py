@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-1bgm*_7+831xs2deemlufo52sx^k03+wrql&)k(a5h616qni6c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['64.226.99.85']
+ALLOWED_HOSTS = ['.himfoundation.net','64.226.99.85', 'localhost','127.0.0.1']
 
 
 # Application definition
@@ -78,25 +78,25 @@ WSGI_APPLICATION = 'hope_in_messiah.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
+# if DEBUG:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
     
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'hope_in_messiah',
-            'USER': 'hope_admin',
-            'PASSWORD': 'hope123456',
-            'HOST': 'localhost',
-            'PORT': '',
-        }
-    }
+# else
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#             'NAME': 'hope_in_messiah',
+#             'USER': 'hope_admin',
+#             'PASSWORD': 'hope123456',
+#             'HOST': 'localhost',
+#             'PORT': '',
+#         }
+#     }
 
 
 
