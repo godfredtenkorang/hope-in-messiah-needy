@@ -29,7 +29,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", cast=bool)
 
-ALLOWED_HOSTS = ['.himfoundation.net','157.245.247.173', 'localhost','127.0.0.1']
+ALLOWED_HOSTS = ['.himfoundation.net','143.198.190.202', 'localhost','127.0.0.1']
 
 
 # Application definition
