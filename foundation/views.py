@@ -102,7 +102,7 @@ def gallery(request):
     galleries = Gallery.objects.order_by('-date')
     context = {
         'galleries': galleries,
-        'tttle': 'Gallery'
+        'title': 'Gallery'
     }
     return render(request, 'foundation/gallery.html', context)
 
