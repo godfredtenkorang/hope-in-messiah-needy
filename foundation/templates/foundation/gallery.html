@@ -21,9 +21,9 @@
     <div class="container">
         <div class="row">
                 {% for gallery in galleries %}
-                    <div class="col-lg-2 col-md-6 col-sm-12 pb-2 d-flex justify-content-center">
+                    <div class="col-lg-3 col-md-6 col-sm-12 pb-2 d-flex justify-content-center">
                         <a href="{{ gallery.image.url }}" data-lightbox="modals" data-title="{{ gallery.title }}">
-                            <img src="{{ gallery.image.url }}" height="150px" width="100%" alt="">
+                            <img src="{{ gallery.image.url }}" height="200px" width="100%" alt="">
                         </a>
                     </div>
                 {% endfor %}
