@@ -43,11 +43,12 @@ class Event(models.Model):
         return self.title
     
 class Gallery(models.Model):
+    title = models.CharField(max_length=100)
     image = models.ImageField(upload_to='galary-img', default='')
     date = models.DateTimeField(default=timezone.now)
     
     def __str__(self):
-        return str(self.image)
+        return self.title
     
 class HomeBlog(models.Model):
     image = models.ImageField(upload_to='homeblog-img')
