@@ -11,10 +11,12 @@ from django.contrib import messages
 def home(request):
     posts = HomeBlog.objects.order_by("-date_posted")
     events = HomeEvent.objects.order_by("-start_date")
+    videos = Video.objects.all()
     galleries = Gallery.objects.all()
     context = {
         'posts': posts,
         'events': events,
+        'videos': videos,
         'galleries': galleries
     }
     return render(request, 'foundation/home.html', context)

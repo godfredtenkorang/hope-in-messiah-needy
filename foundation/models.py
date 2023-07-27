@@ -78,6 +78,13 @@ class LatestCause(models.Model):
     
     def __str__(self):
         return self.title
+    
+class Video(models.Model):
+    caption = models.CharField(max_length=100)
+    video = models.FileField(upload_to="video/%y")
+    
+    def __str__(self):
+        return self.caption
 
 class Payment(models.Model):
     amount = models.PositiveBigIntegerField()

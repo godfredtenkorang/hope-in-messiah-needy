@@ -1,6 +1,5 @@
 {% extends 'foundation/base.html' %}
 {% load static %}
-
 {% block css_files %}
 <link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
 {% endblock %}
@@ -62,6 +61,19 @@
         </div>
     </div>
 </section>
+<section class="pt-5 pb-4" style="background-color: #fffefe;">
+    <div class="container">
+        <div class="row">
+            {% for v in videos %}
+                <div class="col-md-6">
+                    <video style="height: 350px; width:100%" class="embed-responsive embed-responsive-21by9" controls="controls">
+                        <source src="{{ v.video.url }}" type="video/mp4">
+                    </video>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 <section class="pt-4 mt-4 pb-4">
     <div class="container">
         <div class="row">
@@ -74,7 +86,7 @@
                 <a class="btn btn-outline-secondary" href="{% url 'about' %}">About Us</a>
             </div>
             <div class="col-md-6 d-flex justify-content-center pt-4">
-                <img class="rounded-circle" src="{% static 'foundation/images/donate666.jpeg' %}" height="350px"
+                <img class="rounded-circle" src="{% static 'foundation/images/ab.jpeg' %}" height="350px"
                     width="350px" alt="">
             </div>
         </div>
