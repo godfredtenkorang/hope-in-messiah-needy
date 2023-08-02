@@ -29,7 +29,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config("DEBUG", cast=bool)
 
-ALLOWED_HOSTS = ['himfoundation.net','www.himfoundation.net', 'localhost','127.0.0.1']
+ALLOWED_HOSTS = ['.himfoundation.net','159.223.137.11', 'localhost','127.0.0.1']
 
 
 # Application definition
@@ -80,25 +80,24 @@ WSGI_APPLICATION = 'hope_in_messiah.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 # if DEBUG:
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
     
 # else
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#             'NAME': 'hope_in_messiah',
-#             'USER': 'hope_admin',
-#             'PASSWORD': 'hope123456',
-#             'HOST': 'localhost',
-#             'PORT': '',
-#         }
-#     }
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'godey',
+        'USER': 'godey',
+        'PASSWORD': 'Gony@100',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
 
 # Password validation
@@ -135,8 +134,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
