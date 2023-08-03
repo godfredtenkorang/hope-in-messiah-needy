@@ -3,6 +3,7 @@ import secrets
 from .paystack import PayStack
 from django.utils import timezone
 from django.contrib.auth.models import User
+from embed_video.fields import EmbedVideoField
 
 class Blog(models.Model):
     image = models.ImageField(upload_to='blog-img')
@@ -79,12 +80,18 @@ class LatestCause(models.Model):
     def __str__(self):
         return self.title
     
-class Video(models.Model):
-    caption = models.CharField(max_length=100)
-    video = models.FileField(upload_to="video/%y")
-    
+
+class YouTube(models.Model):
+    title = models.CharField(max_length=50, blank=True)
+    date_added = models.DateTimeField(auto_now_add=True)
+    url = EmbedVideoField()
+
     def __str__(self):
-        return self.caption
+        return self.title
+
+    class Meta:
+        ordering = ['-date_added']
+
 
 class Payment(models.Model):
     amount = models.PositiveBigIntegerField()

@@ -1,7 +1,9 @@
 {% extends 'foundation/base.html' %}
 {% load static %}
+{% load embed_video_tags %}
 {% block css_files %}
 <link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'foundation/lightbox.css' %}">
 {% endblock %}
 {% block content %}
 <section class="pt-5 pb-4">
@@ -64,17 +66,17 @@
 <section class="pt-5 pb-4" style="background-color: #fffefe;">
     <div class="container">
         <div class="row">
-            {% for v in videos %}
-                <div class="col-md-6">
-                    <video style="height: 350px; width:100%" class="embed-responsive embed-responsive-21by9" controls="controls">
-                        <source src="{{ v.video.url }}" type="video/mp4">
-                    </video>
-                </div>
+            {% for video in youtubes %}
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center">
+                <article class="pb-3">
+                    {% video video.url '320x240' %}
+                </article>
+            </div>
             {% endfor %}
         </div>
     </div>
 </section>
-<section class="pt-4 mt-4 pb-4">
+<section class="pt-4 mt-4 pb-4" style="background-color: #D8D8D8">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -92,7 +94,7 @@
         </div>
     </div>
 </section>
-<section class="pt-4 mt-4 pb-4 p-5" style="background-color: #eee;">
+<section class="pt-4 mt-4 pb-4 p-5" style="background-color: #fff;">
     <div class="four">
         <h1 class="heading-title"><span>WHAT WE DO</span>We Arrange Many Social <br> Events For <em>Charity</em>
             Donations
@@ -124,7 +126,7 @@
         </div>
     </div>
 </section>
-<section class="pt-4 p-4">
+<section class="pt-4 p-4" style="background-color: #fafafa">
     <div class="four">
         <h1 class="heading-title"><span>WHAT WE DO</span>Our Expert Team<br> Always <em>Ready</em> To Volunteer</h1>
     </div>

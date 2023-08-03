@@ -1,6 +1,9 @@
 from django.contrib import admin
+from embed_video.admin import AdminVideoMixin
 from .models import *
 
+class AdminVideo(AdminVideoMixin, admin.ModelAdmin):
+    pass
 
 admin.site.register(Payment)
 admin.site.register(Blog)
@@ -11,4 +14,4 @@ admin.site.register(HomeBlog)
 admin.site.register(HomeEvent)
 admin.site.register(LatestCause)
 admin.site.register(Comment)
-admin.site.register(Video)
+admin.site.register(YouTube, AdminVideo)
