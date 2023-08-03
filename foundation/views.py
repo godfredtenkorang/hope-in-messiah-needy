@@ -11,7 +11,7 @@ from django.contrib import messages
 def home(request):
     posts = HomeBlog.objects.order_by("-date_posted")
     events = HomeEvent.objects.order_by("-start_date")
-    youtubes = YouTube.objects.all()
+    youtubes = YouTube.objects.order_by("-date_added")
     galleries = Gallery.objects.all()
     context = {
         'posts': posts,

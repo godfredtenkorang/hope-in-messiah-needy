@@ -86,9 +86,6 @@ class YouTube(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
     url = EmbedVideoField()
 
-    class Meta:
-        ordering = ['-date_added']
-        
     def __str__(self):
         return self.title
 
