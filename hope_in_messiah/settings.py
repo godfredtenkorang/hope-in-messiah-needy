@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'foundation',
     'crispy_forms',
     'embed_video',
+    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
