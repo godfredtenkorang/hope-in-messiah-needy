@@ -6,7 +6,51 @@
 <link rel="stylesheet" type="text/css" href="{% static 'foundation/lightbox.css' %}">
 {% endblock %}
 {% block content %}
-<section class="pt-5 pb-4">
+
+
+<div class="image-slider-container">
+    <div class="sliders">
+        <img src="{% static 'foundation/images/slider.JPG' %}" >
+        <div class="text-slider">
+            <div class="text">
+                <p>DONATE TO CONTRIBUTE</p>
+            <h1>Let's Build The Better World <br> Together</h1>
+            <p class="secondP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum sed facilis ab! Repudiandae, inventore placeat.</p>
+            <div class="donate">
+                <a href="{% url 'donate' %}"class="btn41-43 btn-41"><i class="fa-solid fa-hand-holding-dollar"></i>  Donate</a>
+                <a href="" class="btn41-43 btn-41">+233 24 497 4409</a>
+               
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="sliders">
+        <img src="{% static 'foundation/images/slider2.jpg' %}" >
+        <div class="text-slider">
+            <div class="text">
+                <p>DONATE TO CONTRIBUTE</p>
+            <h1>Let's Build The Better World <br> Together</h1>
+            <p class="secondP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum sed facilis ab! Repudiandae, inventore placeat.</p>
+            <div class="donate">
+                <a href="{% url 'donate' %}" class="btn41-43 btn-41"><i class="fa-solid fa-hand-holding-dollar"></i>  Donate</a>
+                <a href="" class="btn41-43 btn-41">+233 24 497 4409</a>
+               
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-buttons">
+        <button onclick="prevSlide()" class="left"><i class="fa-solid fa-arrow-left"></i> </button>
+
+        <button onclick="nextSlide()" class="right"><i class="fa-solid fa-arrow-right"></i> </button>
+    </div>
+</div>
+
+
+
+
+
+<!-- <section class="pt-5 pb-4">
     <div class="container">
         <div class="row">
             <div class="col-md-6 pt-4">
@@ -28,17 +72,19 @@
             </div>
         </div>
     </div>
-</section>
-<section class="pt-4" style="background-color: #D8D8D8">
+</section> -->
+
+
+<section class="pt-4">
     <div class="four">
         <h1 class="heading-title"><span>WHAT WE DO</span>We Are In The <br> Mission To <em>Help</em>The Helpless </h1>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 pt-4 pb-4">
+            <div class="col-md-4 pt-4 pb-4" >
                 <div class="text-center">
                     <img src="{% static 'foundation/images/donate.png' %}" height="50px" alt="">
-                    <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;">Needy and Widows</h2>
+                    <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;color:#F0A04B ; padding: 10px 0;">Needy and Widows</h2>
                     <p>We take special care for widows and the poor and needy. A person who is poor and widow are would
                         be donated to help them.</p>
                 </div>
@@ -46,7 +92,7 @@
             <div class="col-md-4 pt-4 pb-4">
                 <div class="text-center">
                     <img src="{% static 'foundation/images/disabled.png' %}" height="50px" alt="">
-                    <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;">Physically Challenged
+                    <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700; color:#F0A04B ; padding: 10px 0;">Physically Challenged
                     </h2>
                     <p>We take care for those who are unable to perform an activity independently with some donations to
                         be able to sustain them.</p>
@@ -55,7 +101,7 @@
             <div class="col-md-4 pt-4 pb-4">
                 <div class="text-center">
                     <img src="{% static 'foundation/images/church_.png' %}" height="50px" alt="">
-                    <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;">Church Facility</h2>
+                    <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;color:#F0A04B ;padding: 10px 0;">Church Facility</h2>
                     <p>Building a church, hall or any other building within whicb a church program, event or activity is
                         carried out.</p>
                 </div>
@@ -247,7 +293,7 @@
             </div>
         </div>
 </section>
-<div class="slider" style="background-color:#eee">
+<div class="slider" style="background-image:#eee">
     <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
     <input type="radio" name="slider" title="slide2" class="slider__nav" />
     <input type="radio" name="slider" title="slide3" class="slider__nav" />
@@ -344,4 +390,43 @@
         </div>
     </div>
 </section>
+
+<script>
+    let currentSlide = 0;
+const slides = document.querySelectorAll('.sliders');
+const slideInterval = 7000; // Change slide every 5 seconds (5000 milliseconds)
+
+function showSlide(index) {
+slides.forEach((slide, i) => {
+    if (i === index) {
+        slide.style.display = 'block';
+    } else {
+        slide.style.display = 'none';
+    }
+});
+}
+
+function nextSlide() {
+currentSlide++;
+if (currentSlide >= slides.length) {
+    currentSlide = 0;
+}
+showSlide(currentSlide);
+}
+
+function prevSlide() {
+currentSlide--;
+if (currentSlide < 0) {
+    currentSlide = slides.length - 1;
+}
+showSlide(currentSlide);
+}
+
+// Automatic slide change every 5 seconds
+setInterval(nextSlide, slideInterval);
+
+// Initial setup
+showSlide(currentSlide);
+
+</script>
 {% endblock %}
