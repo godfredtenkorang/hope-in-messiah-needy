@@ -12,12 +12,10 @@ def home(request):
     posts = HomeBlog.objects.order_by("-date_posted")
     events = HomeEvent.objects.order_by("-start_date")
     youtubes = YouTube.objects.order_by("-date_added")
-    galleries = Gallery.objects.all()
     context = {
         'posts': posts,
         'events': events,
         'youtubes': youtubes,
-        'galleries': galleries
     }
     return render(request, 'foundation/home.html', context)
 
@@ -100,10 +98,25 @@ def contact(request):
     }
     return render(request, 'foundation/contact.html', context)
 
-def gallery(request):
-    galleries = Gallery.objects.order_by('-date')
+def category(request):
+    categories = MyCategory.objects.all()
+    
     context = {
-        'galleries': galleries,
+        'categories': categories,
+        'title': 'Gallery'
+    }
+    return render(request, 'foundation/category.html', context)
+
+def gallery(request, category_slug):
+    category = None
+    gallery = MyGallery.objects.all()
+    if category_slug:
+        category = get_object_or_404(MyCategory, slug=category_slug)
+        gallery = gallery.filter(category=category)
+
+    context = {
+        'category': category,
+        'gallery': gallery,
         'title': 'Gallery'
     }
     return render(request, 'foundation/gallery.html', context)

@@ -10,7 +10,8 @@ urlpatterns = [
     path('blog/', PostListView.as_view(), name='blog'),
     path('blog/<int:pk>/', PostDetailView.as_view(), name='blog-detail'),
     path('contact/', views.contact, name='contact'),
-    path('gallery/', views.gallery, name='gallery'),
+    path('category/', views.category, name='category'),
+    path('gallery/<slug:category_slug>/', views.gallery, name='gallery'),
     path('donate/', views.donate, name='donate'),
     path('make_payment/<str:ref>/', views.verify_payment, name='verify-payment')
 ]
