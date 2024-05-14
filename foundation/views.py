@@ -103,7 +103,7 @@ def category(request):
     
     context = {
         'categories': categories,
-        'title': 'Gallery'
+        'title': 'Gallery Categories'
     }
     return render(request, 'foundation/category.html', context)
 
