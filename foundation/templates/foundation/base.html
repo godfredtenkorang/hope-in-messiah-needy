@@ -381,21 +381,145 @@
     </div>
   </nav>
   {% block content %}{% endblock %}
-  <section style="background-color: #080808; height: 150px;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="footer-social-links">
-            <a href="https://web.facebook.com/profile.php?id=100092590501953" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="#" title="Google+" target="_blank"><i class="fa fa-google"></i></a>
-            <a href="#" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
-            <a href="#" title="Dribbble" target="_blank"><i class="fa fa-instagram"></i></a>
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+  <div class=" my-5">
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white" style="background-color: #6844b2">
+      <!-- Grid container -->
+      <div class=" p-4 pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                Hope in messiah <br> needy foundation
+              </h6>
+              <p>
+                Hope in messiah needy foundation is an independent social service functioning as a non-profit charity. Our charitable
+                activities were motivated by the concern of high rate of poverty in some part of our country and the need to provide
+                assistance.
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">What we do</h6>
+              <p>
+                <a class="text-white">Donate</a>
+              </p>
+              <p>
+                <a class="text-white">Church Facility</a>
+              </p>
+              <p>
+                <a class="text-white">Special Care for Widows</a>
+              </p>
+              <p>
+                <a class="text-white">Help the Disabilityr</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                Useful links
+              </h6>
+              <p>
+                <a href="{% url 'about' %}" class="text-white">Know More About Us?</a>
+              </p>
+              <p>
+                <a href="{% url 'latest_cause' %}" class="text-white">Latest Causes</a>
+              </p>
+              <p>
+                <a href="{% url 'blog' %}" class="text-white">Our Blog</a>
+              </p>
+              <p>
+                <a href="{% url 'contact' %}" class="text-white">Need Help?</a>
+              </p>
+            </div>
+  
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+              <p><i class="fas fa-home mr-3"></i> Kronum, Ashanti Region</p>
+              <p><i class="fas fa-envelope mr-3"></i>hopeinmessiahneedyfoundation@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> +233 24 497 4409</p>
+            </div>
+            <!-- Grid column -->
           </div>
-        </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+  
+        <hr class="my-3">
+  
+        <!-- Section: Copyright -->
+        <section class="p-3 pt-0">
+          <div class="row d-flex align-items-center">
+            <!-- Grid column -->
+            <div class="col-md-7 col-lg-8 text-center text-md-start">
+              <!-- Copyright -->
+              <div class="p-3">
+                © 2024 Copyright:
+                <a class="text-white" href="https://www.himfoundation.net/">himfoundation.net</a>
+              </div>
+              <!-- Copyright -->
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+              <!-- Facebook -->
+              <a href="https://web.facebook.com/profile.php?id=100092590501953" class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                  class="fab fa-facebook-f"></i></a>
+  
+              <!-- Twitter -->
+              <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                  class="fab fa-twitter"></i></a>
+  
+              <!-- Google -->
+              <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                  class="fab fa-youtube"></i></a>
+  
+              <!-- Instagram -->
+              <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
+                  class="fab fa-instagram"></i></a>
+            </div>
+            <!-- Grid column -->
+          </div>
+        </section>
+
+        <!-- Section: Copyright -->
+        <section class="text-center">
+          <div class="d-flex align-items-center">
+            <!-- Grid column -->
+            <div class="col-md-12 text-center">
+              <!-- Copyright -->
+              <div>
+                Developed by:
+                <a class="text-white" href="https://godeytech.com/">Godey Tech</a>
+              </div>
+              <!-- Copyright -->
+            </div>
+          </div>
+        </section>
+        <!-- Section: Copyright -->
       </div>
-    </div>
-  </section>
+      <!-- Grid container -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
   <button id="btnScrollToTop">
     <i class="material-icons d-flex justify-content-center">arrow_upward</i>
   </button>
