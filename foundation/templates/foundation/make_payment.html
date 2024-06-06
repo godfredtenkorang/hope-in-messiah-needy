@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
 {% endblock %}
 {% block content %}
-<section class="myHeading pt-4 mt-5">
+<section class="myHeading pt-4 mt-5"  data-aos="fade-up">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -13,7 +13,7 @@
         </div>
     </div>
 </section>
-<section class="pt-3" style="height: 40%;">
+<section class="pt-3" style="height: 40%;"  data-aos="fade-left">
     <div class="container">
             <fieldset class="form-group">
                 <legend class="border-bottom mb-4">Make Payment for GH¢{{ payment.amount }}</legend>

@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
 {% endblock %}
 {% block content %}
-<section class="myHeading pt-4 mt-5">
+<section class="myHeading pt-4 mt-5"  data-aos="fade-up">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -14,7 +14,7 @@
     </div>
 </section>
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12"  data-aos="fade-up">
         {% if messages %}
         {% for message in messages %}
         <div class="alert alert-{{ message.tags }}">{{ message }}</div>
@@ -22,7 +22,7 @@
         {% endif %}
     </div>
 </div>
-<section style="overflow: hidden;">
+<section style="overflow: hidden;"  data-aos="flip-up">
     <div class="container">
         <div class="col-md-12">
             <div class="mapouter embed-responsive embed-responsive-1by1">
@@ -51,14 +51,14 @@
     </div>
 </section>
 <section id="contact" class="pt-4">
-    <div class="four">
+    <div class="four"  data-aos="fade-up">
         <h1 class="heading-title"><span>GET IN TOUCH</span> We will Be Glad <br> To
             <em>Hear</em> From You
         </h1>
     </div>
     <div class="contact-wrapper">
         <!-- Left contact page -->
-        <form method="POST" class="form-horizontal">
+        <form method="POST" class="form-horizontal"  data-aos="flip-up">
             {% csrf_token %}
             <div class="form-group">
                 <div class="col-sm-12">

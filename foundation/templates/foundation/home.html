@@ -8,8 +8,8 @@
 {% block content %}
 
 
-<div class="image-slider-container">
-    <div class="sliders">
+<div class="image-slider-container" >
+    <div class="sliders" data-aos="fade-up">
         <img src="{% static 'foundation/images/slider.JPG' %}" >
         <div class="text-slider">
             <div class="text">
@@ -47,12 +47,12 @@
 </div>
 
 <section class="pt-4">
-    <div class="four">
+    <div class="four" data-aos="fade-down">
         <h1 class="heading-title"><span>WHAT WE DO</span>We Are In The <br> Mission To <em>Help</em>The Helpless </h1>
     </div>
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-4 pt-4 pb-4">
+            <div class="col-md-4 pt-4 pb-4" data-aos="fade-up">
                 <div class="text-center">
                     <img src="{% static 'foundation/images/donate.png' %}" height="50px" alt="">
                     <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;color:#F0A04B ; padding: 10px 0;">Needy and Widows</h2>
@@ -60,7 +60,7 @@
                         be donated to help them.</p>
                 </div>
             </div>
-            <div class="col-md-4 pt-4 pb-4">
+            <div class="col-md-4 pt-4 pb-4" data-aos="fade-down">
                 <div class="text-center">
                     <img src="{% static 'foundation/images/disabled.png' %}" height="50px" alt="">
                     <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700; color:#F0A04B ; padding: 10px 0;">Physically Challenged
@@ -69,7 +69,7 @@
                         be able to sustain them.</p>
                 </div>
             </div>
-            <div class="col-md-4 pt-4 pb-4">
+            <div class="col-md-4 pt-4 pb-4" data-aos="fade-left">
                 <div class="text-center">
                     <img src="{% static 'foundation/images/church_.png' %}" height="50px" alt="">
                     <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;color:#F0A04B ;padding: 10px 0;">Church Facility</h2>
@@ -82,7 +82,7 @@
 </section>
 <section class="pt-5 pb-4" style="background-color: #fffefe;">
     <div class="container">
-        <div class="row">
+        <div class="row" data-aos="slide-up">
             {% for video in youtubes %}
             <div class="col-lg-4 col-md-6 col-sm-12 text-center">
                 <article class="pb-3">
@@ -96,7 +96,7 @@
 <section class="pt-4 mt-4 pb-4" style="background-color: #D8D8D8">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="zoom-in-up">
                 <h5 class="about-topic">About Our Foundation</h5>
                 <h3 class="about-top">We Are In The Mission To Help The Helpless</h3>
                 <p>Hope in messiah needy foundation is an independent social service functioning as a non-profit
@@ -104,7 +104,7 @@
                     part of our country and the need to provide assistance.</p>
                 <a class="btn btn-outline-secondary" href="{% url 'about' %}">About Us</a>
             </div>
-            <div class="col-md-6 d-flex justify-content-center pt-4">
+            <div class="col-md-6 d-flex justify-content-center pt-4" data-aos="zoom-in-down">
                 <img class="rounded-circle" src="{% static 'foundation/images/ab.jpeg' %}" height="350px"
                     width="350px" alt="">
             </div>
@@ -112,13 +112,13 @@
     </div>
 </section>
 <section class="pt-4 mt-4 pb-4 p-5" style="background-color: #fff;">
-    <div class="four">
+    <div class="four" data-aos="slide-down">
         <h1 class="heading-title"><span>WHAT WE DO</span>We Arrange Many Social <br> Events For <em>Charity</em>
             Donations
         </h1>
     </div>
     <div class="container">
-        <div class="row">
+        <div class="row" data-aos="flip-up">
             {% for event in events %}
             <div class="col-lg-4 col-md-6 col-sm-12 pt-4 d-flex justify-content-center">
                 <div class="card" style="height: 100%;">
@@ -144,13 +144,13 @@
     </div>
 </section>
 <section class="pt-4 p-4" style="background-color: #fafafa">
-    <div class="four">
+    <div class="four" data-aos="slide-left">
         <h1 class="heading-title"><span>WHAT WE DO</span>Our Expert Team<br> Always <em>Ready</em> To Volunteer</h1>
     </div>
     <div class="container">
     <div class="row team-row pt-4 d-flex justify-content-center">
 
-            <div class="column2">
+            <div class="column2" data-aos="fade-up">
                 <div class="team">
                     <div class="team-img">
                         <img class="team-image" src="{% static 'foundation/images/dir.jpeg' %}" alt="Team Image">
@@ -170,7 +170,7 @@
                 </div>
             </div>
 
-            <div class="column2">
+            <div class="column2" data-aos="fade-down">
                 <div class="team">
                     <div class="team-img">
                         <img class="team-image" src="{% static 'foundation/images/christy.jpeg' %}" alt="Team Image">
@@ -190,7 +190,7 @@
             </div>
 
 
-            <div class="column2">
+            <div class="column2" data-aos="fade-left">
                 <div class="team">
                     <div class="team-img">
                         <img class="team-image" src="{% static 'foundation/images/dickson.jpeg' %}" alt="Team Image">
@@ -202,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column2">
+                <div class="column2" data-aos="fade-right">
                     <div class="team">
                         <div class="team-img">
                             <img class="team-image" src="{% static 'foundation/images/robeta.jpeg' %}" alt="Team Image">
@@ -220,7 +220,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column2">
+                <div class="column2" data-aos="fade-up">
                     <div class="team">
                         <div class="team-img">
                             <img class="team-image" src="{% static 'foundation/images/bishop.jpeg' %}" alt="Team Image">
@@ -241,7 +241,7 @@
                 </div>
         
         
-                <div class="column2">
+                <div class="column2" data-aos="fade-down">
                     <div class="team">
                         <div class="team-img">
                             <img class="team-image" src="{% static 'foundation/images/emma.jpeg' %}" alt="Team Image">
@@ -264,7 +264,7 @@
             </div>
         </div>
 </section>
-<div class="slider video-wrapper">
+<div class="slider video-wrapper" data-aos="fade-up">
     <video class="background" autoplay muted loop
         poster="https://cyphers-thecyphersagency.netdna-ssl.com/wp-content/uploads/2016/10/web-texture.jpg">
         <source src="https://videos.pexels.com/video-files/6624838/6624838-hd_1080_1920_30fps.mp4"
@@ -307,7 +307,7 @@
     </div>
 </div>
 <section class="pt-4 pb-4">
-    <div class="four">
+    <div class="four" data-aos="fade-up-right">
         <h1 class="heading-title"><span>OUR RECENT BLOG</span> Latest News From <br> Our
             <em>Recent</em> Blog
         </h1>
@@ -315,7 +315,7 @@
     <div class="container">
         <div class="row">
             {% for post in posts %}
-            <div class="col-md-4 pt-4">
+            <div class="col-md-4 pt-4" data-aos="fade-up">
                 <div class="card blog-section" style="height:100%">
                     <img src="{{ post.image.url }}" height="350px" alt="">
                     <div class="card-body">
@@ -330,33 +330,33 @@
         </div>
     </div>
 </section>
-<section class="counter-section" style="background-color: #000;">
+<section class="counter-section" style="background-color: #000;" data-aos="fade-up">
     <div class="container-fluid">
         <div class="row about-row">
             <div class="col-lg-12 counter-img">
                 <div class="column">
-                    <div class="card-img">
+                    <div class="card-img" data-aos="fade-up">
                         <img src="{% static 'foundation/images/giving.png' %}" height="50px" alt="icon">
                         <h3 class="pt-3">1000+</h3>
                         <p style="font-size: 20px; font-weight:bold;">Donations</p>
                     </div>
                 </div>
                 <div class="column">
-                    <div class="card-img">
+                    <div class="card-img" data-aos="fade-up">
                         <img src="{% static 'foundation/images/fund.png' %}" height="50px" alt="icon">
                         <h3 class="pt-3">90+</h3>
                         <p style="font-size: 20px; font-weight:bold;">Fund Raised</p>
                     </div>
                 </div>
                 <div class="column">
-                    <div class="card-img">
+                    <div class="card-img" data-aos="fade-up">
                         <img src="{% static 'foundation/images/life.png' %}" height="50px" alt="icon">
                         <h3 class="pt-3">400+</h3>
                         <p style="font-size: 20px; font-weight:bold;">Life Saved</p>
                     </div>
                 </div>
                 <div class="column">
-                    <div class="card-img">
+                    <div class="card-img" data-aos="fade-up">
                         <img src="{% static 'foundation/images/happy.png' %}" height="50px" alt="icon">
                         <h3 class="pt-3">300+</h3>
                         <p style="font-size: 20px; font-weight:bold;">Happy People</p>

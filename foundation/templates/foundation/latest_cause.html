@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
 {% endblock %}
 {% block content %}
-<section class="myHeading pt-4 mt-5">
+<section class="myHeading pt-4 mt-5"  data-aos="fade-up">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             {% for cause in causes %}
-            <div class="col-lg-4 col-md-6 col-sm-12 pt-4 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 pt-4 d-flex justify-content-center"  data-aos="fade-down">
                 <div class="card blog-section" style="height: 100%;">
                     <img src="{{ cause.image.url }}" height="250px" width="300px" alt="">
                     <div class="card-body">

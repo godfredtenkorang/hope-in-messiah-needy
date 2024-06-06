@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
 {% endblock %}
 {% block content %}
-<section class="myHeading pt-4 mt-5">
+<section class="myHeading pt-4 mt-5"  data-aos="fade-up">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-8">
                 {% for blog in blogs %}
-                    <div class="card mb-4 blog-section">
+                    <div class="card mb-4 blog-section"  data-aos="fade-down">
                         <img class="card-img-top" src="{{ blog.image.url }}" height="350px" alt="Card image cap">
                         <div class="card-body">
                         <h3 class="card-title"><a class="blog-title" href="{% url 'blog-detail' blog.id %}">{{ blog.title }}</a></h3>
@@ -45,7 +45,7 @@
                         {% endif %}
                 {% endif %}
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4"  data-aos="flip-up">
                 {% for gallery in galleries %}
                     <div class="pt-4">
                         <div>

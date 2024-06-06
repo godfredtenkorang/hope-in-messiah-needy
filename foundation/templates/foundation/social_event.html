@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'foundation/foundation.css' %}">
 {% endblock %}
 {% block content %}
-<section class="myHeading pt-4 mt-5">
+<section class="myHeading pt-4 mt-5"  data-aos="fade-up">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -13,14 +13,14 @@
         </div>
     </div>
 </section>
-<section class="pt-4 mt-4 pb-4 p-5">
+<section class="pt-4 mt-4 pb-4 p-5"  data-aos="fade-down">
     <div class="four">
         <h1 class="heading-title"><span>WHAT WE DO</span>We Arrange Many Social <br> Events For <em> Charity</em> Donations
         </h1>
     </div>
         <div class="row">
             {% for social in social_events %}
-            <div class="col-lg-4 col-md-6 col-sm-12 pt-4 d-flex justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-12 pt-4 d-flex justify-content-center"  data-aos="fade-up">
                 <div class="card blog-section" style="height:100%;">
                     <img src="{{ social.image.url }}" height="300px" alt="">
                     <div class="card-body">
@@ -46,28 +46,28 @@
     <div class="container-fluid">
         <div class="row about-row">
             <div class="col-lg-12 counter-img">
-                <div class="column">
+                <div class="column"  data-aos="flip-up">
                     <div class="card-img">
                         <img src="{% static 'foundation/images/giving.png' %}" height="50px" alt="icon">
                         <h3 class="pt-3">2000+</h3>
                         <p style="font-size: 20px; font-weight:bold;">Donations</p>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column" data-aos="flip-down">
                     <div class="card-img">
                         <img src="{% static 'foundation/images/fund.png' %}" height="50px" alt="icon">
                         <h3 class="pt-3">90+</h3>
                         <p style="font-size: 20px; font-weight:bold;">Fund Raised</p>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column" data-aos="flip-left">
                     <div class="card-img">
                         <img src="{% static 'foundation/images/life.png' %}" height="50px" alt="icon">
                         <h3 class="pt-3">400+</h3>
                         <p style="font-size: 20px; font-weight:bold;">Life Saved</p>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column data-aos="flip-right">
                     <div class="card-img">
                         <img src="{% static 'foundation/images/happy.png' %}" height="50px" alt="icon">
                         <h3 class="pt-3">500+</h3>

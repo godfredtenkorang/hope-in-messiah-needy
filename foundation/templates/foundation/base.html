@@ -16,6 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -382,7 +383,7 @@
   </nav>
   {% block content %}{% endblock %}
   <!-- Remove the container if you want to extend the Footer to full width. -->
-  <div class=" my-5">
+  <div class=" my-5" data-aos="fade-up">
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white" style="background-color: #6844b2">
       <!-- Grid container -->
@@ -525,6 +526,13 @@
   </button>
   <script src="{% static 'foundation.js' %}"></script>
   <script src="{% static 'lightbox-plus-jquery.js' %}"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: false,
+      });
+    </script>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
