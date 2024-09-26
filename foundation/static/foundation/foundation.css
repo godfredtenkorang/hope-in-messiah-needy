@@ -1,6 +1,9 @@
-  .navbar {
+ /* The above code is a CSS comment block that includes a CSS rule for a class named `.navbar`. The
+ rule sets a box shadow with the following properties: horizontal offset of 5px, vertical offset of
+ 6px, blur radius of 8px, spread radius of 10px, and color of #eee (light gray). */
+  /* .navbar {
     box-shadow: 5px 6px 8px 10px #eee;
-  }
+  } */
 
    /*--------------scrollTop start------------------ */
    #btnScrollToTop {
