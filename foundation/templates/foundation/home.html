@@ -289,9 +289,9 @@
                 <div class="card blog-section" style="height:100%">
                     <img src="{{ post.image.url }}" height="350px" alt="">
                     <div class="card-body">
-                        <h2 class="card-title" id="text-element"><a class="blog-title" href="{% url 'blog-detail' post.id %}">{{ post.title }}</a></h2>
+                        <h2 class="card-title"><a class="blog-title" id="text-element" href="{% url 'blog-detail' post.id %}">{{ post.title }}</a></h2>
                         <div class="card-text">
-                            <p>{{ post.content }}</p>
+                            <!-- <p>{{ post.content }}</p> -->
                         </div>
                     </div>
                 </div>
