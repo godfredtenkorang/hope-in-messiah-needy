@@ -289,7 +289,7 @@
                 <div class="card blog-section" style="height:100%">
                     <img src="{{ post.image.url }}" height="350px" alt="">
                     <div class="card-body">
-                        <h2 class="card-title"><a class="blog-title" id="text-element" href="{% url 'blog-detail' post.id %}">{{ post.title }}</a></h2>
+                        <h4 class="card-title"><a class="blog-title" id="text-element" href="{% url 'blog-detail' post.id %}">{{ post.title }}</a></h4>
                         <div class="card-text">
                             <!-- <p>{{ post.content }}</p> -->
                         </div>
@@ -383,6 +383,6 @@ showSlide(currentSlide);
             element.textContent = text.slice(0, maxLength) + '...';
         }
     }
-    truncateText('#text-element', 120); // Truncate text to 120 charactors
+    truncateText('#text-element', 40); // Truncate text to 120 charactors
 </script>
 {% endblock %}
