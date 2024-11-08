@@ -21,8 +21,8 @@
                     <div class="card mb-4 blog-section"  data-aos="fade-down">
                         <img class="card-img-top" src="{{ blog.image.url }}" height="350px" alt="Card image cap">
                         <div class="card-body">
-                        <h3 class="card-title"><a class="blog-title" href="{% url 'blog-detail' blog.id %}">{{ blog.title }}</a></h3>
-                        <p class="card-text">{{ blog.content }}</p>
+                        <h3 class="card-title" id="text-element"><a class="blog-title" href="{% url 'blog-detail' blog.id %}">{{ blog.title }}</a></h3>
+                        <!-- <p class="card-text" >{{ blog.content }}</p> -->
                         <p class="card-text"><small class="text-muted">Posted on: {{ blog.date_posted|date:"N, m o" }}</small></p>
                         </div>
                     </div>
@@ -57,4 +57,14 @@
         </div>
     </div>
 </section>
+<script>
+    function truncateText(selector, maxLength) {
+        const element = document.querySelector(selector);
+            const text = element.textContent;
+        if (text.length > maxLength) {
+                element.textContent = text.slice(0, maxLength) + '...';
+        }
+    }
+    truncateText('#text-element', 120); // Truncate text to 120 charactors
+</script>
 {% endblock %}

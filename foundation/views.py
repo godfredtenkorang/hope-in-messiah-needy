@@ -9,8 +9,8 @@ from django.contrib import messages
 
 # Create your views here.
 def home(request):
-    posts = HomeBlog.objects.order_by("-date_posted")
-    events = HomeEvent.objects.order_by("-start_date")
+    posts = Blog.objects.order_by("-date_posted")[:3]
+    events = Event.objects.order_by("-start_date")[:3]
     youtubes = YouTube.objects.order_by("-date_added")
     context = {
         'posts': posts,

@@ -159,13 +159,6 @@
                         <h2 class="h2">Director Adu-Boahene</h2>
                         <h3 class="h3">Director</h3>
                         <p></p>
-                        <!-- <div class="team-social">
-                            <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
-                            <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
-                            <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
-                            <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-    
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -179,12 +172,6 @@
                         <h2 class="h2">Christiana Adu-Boahene</h2>
                         <h3 class="h3">Assisted Director</h3>
                         <p></p>
-                        <!-- <div class="team-social">
-                            <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
-                            <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
-                            <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
-                            <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -211,12 +198,6 @@
                             <h2 class="h2">Miss Adjei Roberta</h2>
                             <h3 class="h3">Secretary</h3>
                             <p></p>
-                            <!-- <div class="team-social">
-                                <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
-                                <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
-                                <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
-                                <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -229,13 +210,6 @@
                             <h2 class="h2">Bishop Fred Bimpong</h2>
                             <h3 class="h3">Field Coordinator</h3>
                             <p></p>
-                            <!-- <div class="team-social">
-                                <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
-                                <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
-                                <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
-                                <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-                                
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -250,13 +224,6 @@
                             <h2 class="h2">Emmanuel Adu-Boahene</h2>
                             <h3 class="h3">Non-staff</h3>
                             <p></p>
-                            <!-- <div class="team-social">
-                                <a href="" class="social-tw"> <i class="fa fa-twitter"></i></a>
-                                <a href="" class="social-fb"> <i class="fa fa-facebook-f"></i></a>
-                                <a href="" class="social-li"> <i class="fa fa-linkedin"></i></a>
-                                <a href="" class="social-in"> <i class="fa fa-instagram"></i></a>
-                                
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -299,7 +266,7 @@
         </div>
         <div class="slider__contents"><img class="slider__image rounded-circle"
                 src="{% static 'foundation/images/godfred.jpg' %}" height="150px" width="150px" alt="">
-            <h2 class="slider__caption text-white">Godfred Tenkorang</h2>
+            <h2 class="slider__caption text-white">Godfred Yaw Tenkorang</h2>
             <p class="text-white">Web Developer</p>
             <p class="slider__txt text-white">I have known Hope in Messiah Needy Foundation for some years now and they are
                 reliable and always ready to have you.</p>
@@ -322,7 +289,7 @@
                 <div class="card blog-section" style="height:100%">
                     <img src="{{ post.image.url }}" height="350px" alt="">
                     <div class="card-body">
-                        <h2 class="card-title">{{ post.title }}</h2>
+                        <h2 class="card-title" id="text-element"><a class="blog-title" href="{% url 'blog-detail' post.id %}">{{ post.title }}</a></h2>
                         <div class="card-text">
                             <p>{{ post.content }}</p>
                         </div>
@@ -407,5 +374,15 @@ setInterval(nextSlide, slideInterval);
 // Initial setup
 showSlide(currentSlide);
 
+</script>
+<script>
+    function truncateText(selector, maxLength) {
+        const element = document.querySelector(selector);
+        const text = element.textContent;
+        if (text.length > maxLength) {
+            element.textContent = text.slice(0, maxLength) + '...';
+        }
+    }
+    truncateText('#text-element', 120); // Truncate text to 120 charactors
 </script>
 {% endblock %}
