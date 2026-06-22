@@ -8,78 +8,120 @@
 {% block content %}
 
 
-<div class="image-slider-container" >
-    <div class="sliders" data-aos="fade-up">
-        <img src="{% static 'foundation/images/slider.JPG' %}" >
-        <div class="text-slider">
-            <div class="text">
-                <p>DONATE TO CONTRIBUTE</p>
-            <h1>Let's Build The Better World <br> Together</h1>
-            <p class="secondP">We are more concern in changing the world by giving what God has given you.</p>
-            <div class="donate">
-                <a href="{% url 'donate' %}"class="btn41-43 btn-41"><i class="fa-solid fa-hand-holding-dollar"></i>  Donate</a>
-                <a href="" class="btn41-43 btn-41">+233 24 497 4409</a>
-               
-            </div>
-            </div>
+<!-- <div class="image-slider-container" id="nfSlider">
+  <div class="sliders active">
+    <img src="{% static 'foundation/images/slider.JPG' %}" alt="">
+    <div class="text-slider">
+      <div class="text">
+        <p>Donate to contribute</p>
+        <h1>Let's build the better world <br> together</h1>
+        <p class="secondP">We are more concerned in changing the world by giving what God has given you.</p>
+        <div class="donate">
+          <a href="{% url 'donate' %}" class="btn41-43 btn-41"><i class="fa-solid fa-hand-holding-dollar"></i> Donate</a>
+          <a href="tel:+233244974409" class="btn41-43 btn-41"><i class="fa-solid fa-phone"></i> +233 24 497 4409</a>
         </div>
+      </div>
     </div>
-    <div class="sliders">
-        <img src="{% static 'foundation/images/slider2.jpg' %}" >
-        <div class="text-slider">
-            <div class="text">
-                <p>DONATE TO CONTRIBUTE</p>
-            <h1>Let's Build The Better World <br> Together</h1>
-            <p class="secondP">Hope in Messiah Needy Foundation is always ready to help everyone.</p>
-            <div class="donate">
-                <a href="{% url 'donate' %}" class="btn41-43 btn-41"><i class="fa-solid fa-hand-holding-dollar"></i>  Donate</a>
-                <a href="" class="btn41-43 btn-41">+233 24 497 4409</a>
-               
-            </div>
-            </div>
-        </div>
-    </div>
-    <div class="slide-buttons">
-        <button onclick="prevSlide()" class="left"><i class="fa-solid fa-arrow-left"></i> </button>
+  </div>
 
-        <button onclick="nextSlide()" class="right"><i class="fa-solid fa-arrow-right"></i> </button>
+  <div class="sliders">
+    <img src="{% static 'foundation/images/slider2.jpg' %}" alt="">
+    <div class="text-slider">
+      <div class="text">
+        <p>Donate to contribute</p>
+        <h1>Hope in Messiah, always <br> ready to help</h1>
+        <p class="secondP">Hope in Messiah Needy Foundation is always ready to help everyone.</p>
+        <div class="donate">
+          <a href="{% url 'donate' %}" class="btn41-43 btn-41"><i class="fa-solid fa-hand-holding-dollar"></i> Donate</a>
+          <a href="tel:+233244974409" class="btn41-43 btn-41"><i class="fa-solid fa-phone"></i> +233 24 497 4409</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slide-buttons">
+    <button onclick="nfPrevSlide()" class="left" aria-label="Previous slide"><i class="fa-solid fa-arrow-left"></i></button>
+    <button onclick="nfNextSlide()" class="right" aria-label="Next slide"><i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+
+  <div class="nf-dots" id="nfDots"></div>
+</div> -->
+
+
+<div class="page-wrap">
+    <div class="image-slider-container" id="nfSlider">
+
+        <div class="sliders active">
+            <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1600&auto=format&fit=crop"
+                alt="">
+            <div class="text-slider">
+                <div class="text">
+                    <p>Donate to contribute</p>
+                    <h1>Together, we can make <br> the <b>world better</b></h1>
+                    <p class="secondP">We are more concerned in changing the world by giving what God has given you.</p>
+                    <div class="donate">
+                        <a href="{% url 'donate' %}" class="btn41-43 btn-41"><i
+                                class="fa-solid fa-hand-holding-dollar"></i> Donate</a>
+                        <button class="nf-play" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sliders">
+            <img src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?q=80&w=1600&auto=format&fit=crop"
+                alt="">
+            <div class="text-slider">
+                <div class="text">
+                    <p>Donate to contribute</p>
+                    <h1>Hope in Messiah, always <br> ready to <b>help</b></h1>
+                    <p class="secondP">Hope in Messiah Needy Foundation is always ready to help everyone.</p>
+                    <div class="donate">
+                        <a href="{% url 'donate' %}" class="btn41-43 btn-41"><i
+                                class="fa-solid fa-hand-holding-dollar"></i> Donate</a>
+                        <a href="tel:+233244974409" class="btn41-43 btn-41"><i class="fa-solid fa-phone"></i> +233 24
+                            497 4409</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-buttons">
+            <button onclick="nfPrevSlide()" class="left" aria-label="Previous slide"><i
+                    class="fa-solid fa-arrow-left"></i></button>
+            <button onclick="nfNextSlide()" class="right" aria-label="Next slide"><i
+                    class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <!-- <div class="nf-dots" id="nfDots"></div> -->
+
+        <div class="nf-mission-wrap">
+            <div class="nf-mission-card">
+                <span class="nf-mission-icon"><img src="https://cdn-icons-png.flaticon.com/512/2913/2913461.png"
+                        alt=""></span>
+                <h2>Needy and widows</h2>
+                <p>We take special care for widows and the poor and needy, giving support where it's needed most.</p>
+            </div>
+            <div class="nf-mission-card">
+                <span class="nf-mission-icon"><img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png"
+                        alt=""></span>
+                <h2>Physically challenged</h2>
+                <p>We care for those unable to perform daily activities independently, helping them stay
+                    self-sufficient.</p>
+            </div>
+            <div class="nf-mission-card">
+                <span class="nf-mission-icon"><img src="https://cdn-icons-png.flaticon.com/512/2419/2419943.png"
+                        alt=""></span>
+                <h2>Church facility</h2>
+                <p>Building churches, halls and spaces where programs, events and activities can be carried out.</p>
+            </div>
+        </div>
+
     </div>
 </div>
 
-<section class="pt-4">
-    <div class="four" data-aos="fade-down">
-        <h1 class="heading-title"><span>WHAT WE DO</span>We Are In The <br> Mission To <em>Help</em>The Helpless </h1>
-    </div>
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col-md-4 pt-4 pb-4" data-aos="fade-up">
-                <div class="text-center">
-                    <img src="{% static 'foundation/images/donate.png' %}" height="50px" alt="">
-                    <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;color:#F0A04B ; padding: 10px 0;">Needy and Widows</h2>
-                    <p>We take special care for widows and the poor and needy. A person who is poor and widow are would
-                        be donated to help them.</p>
-                </div>
-            </div>
-            <div class="col-md-4 pt-4 pb-4" data-aos="fade-down">
-                <div class="text-center">
-                    <img src="{% static 'foundation/images/disabled.png' %}" height="50px" alt="">
-                    <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700; color:#F0A04B ; padding: 10px 0;">Physically Challenged
-                    </h2>
-                    <p>We take care for those who are unable to perform an activity independently with some donations to
-                        be able to sustain them.</p>
-                </div>
-            </div>
-            <div class="col-md-4 pt-4 pb-4" data-aos="fade-left">
-                <div class="text-center">
-                    <img src="{% static 'foundation/images/church_.png' %}" height="50px" alt="">
-                    <h2 style="font-family: 'Merriweather Sans', sans-serif; font-weight: 700;color:#F0A04B ;padding: 10px 0;">Church Facility</h2>
-                    <p>Building a church, hall or any other building within whicb a church program, event or activity is
-                        carried out.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+
 <section class="pt-5 pb-4" style="background-color: #fffefe;">
     <div class="container">
         <div class="row" data-aos="slide-up">
@@ -93,24 +135,66 @@
         </div>
     </div>
 </section>
-<section class="pt-4 mt-4 pb-4" style="background-color: #D8D8D8">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6" data-aos="zoom-in-up">
-                <h5 class="about-topic">About Our Foundation</h5>
-                <h3 class="about-top">We Are In The Mission To Help The Helpless</h3>
-                <p>Hope in messiah needy foundation is an independent social service functioning as a non-profit
-                    charity. Our charitable activities were motivated by the concern of high rate of poverty in some
-                    part of our country and the need to provide assistance.</p>
-                <a class="btn btn-outline-secondary" href="{% url 'about' %}">About Us</a>
+<section class="about-section">
+    <div class="about-container">
+
+        <div class="about-copy" data-aos="zoom-in-up">
+            <p class="about-eyebrow">About Our Foundation</p>
+            <h2 class="about-heading">We Are In The Mission To Help The <em>Helpless</em></h2>
+            <p class="about-desc">Hope in messiah needy foundation is an independent social service functioning as a
+                non-profit charity. Our charitable activities were motivated by the concern of high rate of poverty in
+                some part of our country and the need to provide assistance.</p>
+
+            <div class="about-stats">
+                <div class="about-stat">
+                    <span class="about-stat-icon amber"><i class="fa-solid fa-hand-holding-medical"></i></span>
+                    <span>Treatment Help</span>
+                </div>
+                <div class="about-stat">
+                    <span class="about-stat-icon teal"><i class="fa-solid fa-sack-dollar"></i></span>
+                    <span>Fund Raised</span>
+                </div>
             </div>
-            <div class="col-md-6 d-flex justify-content-center pt-4" data-aos="zoom-in-down">
-                <img class="rounded-circle" src="{% static 'foundation/images/ab.jpeg' %}" height="350px"
-                    width="350px" alt="">
+
+            <ul class="about-checklist">
+                <li><span class="check-icon"><i class="fa-solid fa-check"></i></span>Uniting hearts, healing communities
+                </li>
+                <li><span class="check-icon"><i class="fa-solid fa-check"></i></span>Always support charity today
+                    responsibility</li>
+                <li><span class="check-icon"><i class="fa-solid fa-check"></i></span>Helped fund 3,198 projects for the
+                    poor</li>
+            </ul>
+
+            <div class="about-cta-row">
+                <a class="about-learn-btn" href="{% url 'about' %}">
+                    About Us
+                    <span class="arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+                <a class="about-phone" href="tel:+233244974409">
+                    <span class="about-phone-icon"><i class="fa-solid fa-phone"></i></span>
+                    <span class="about-phone-text">
+                        <p>Need help?</p>
+                        <strong>+233 24 497 4409</strong>
+                    </span>
+                </a>
             </div>
         </div>
+
+        <div class="about-visual" data-aos="zoom-in-down">
+            <img class="photo photo-main" src="{% static 'foundation/images/ab.jpeg' %}" alt="">
+            <img class="photo photo-side" src="{% static 'foundation/images/ab.jpeg' %}" alt="">
+            <div class="funded-badge">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <strong>Let help others</strong>
+            </div>
+            <!-- <button class="play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button> -->
+
+        </div>
+
     </div>
 </section>
+
+
 <section class="pt-4 mt-4 pb-4 p-5" style="background-color: #fff;">
     <div class="four" data-aos="slide-down">
         <h1 class="heading-title"><span>WHAT WE DO</span>We Arrange Many Social <br> Events For <em>Charity</em>
@@ -144,135 +228,185 @@
     </div>
 </section>
 <section class="pt-4 p-4" style="background-color: #fafafa">
-    <div class="four" >
+    <div class="four">
         <h1 class="heading-title"><span>WHAT WE DO</span>Our Expert Team<br> Always <em>Ready</em> To Volunteer</h1>
     </div>
-    <div class="container">
-    <div class="row team-row pt-4 d-flex justify-content-center">
+   <section class="volunteer-team-section">
+      <!-- Pattern decorations -->
+    <div class="pattern-ring-1"></div>
+    <div class="pattern-ring-2"></div>
+    <div class="pattern-ring-3"></div>
+    <div class="pattern-ring-4"></div>
+    <div class="pattern-glow-1"></div>
+    <div class="pattern-glow-2"></div>
+    <div class="pattern-cross"></div>
+    <div class="pattern-cross-2"></div>
+    <p class="volunteer-team-label">Our Team</p>
+    <h2 class="volunteer-team-title">Our expert team<br>always ready to volunteer</h2>
+    <div class="volunteer-team-underline"></div>
 
-            <div class="column2" data-aos="fade-up">
-                <div class="team">
-                    <div class="team-img">
-                        <img class="team-image" src="{% static 'foundation/images/dir.jpeg' %}" alt="Team Image">
-                    </div>
-                    <div class="team-content">
-                        <h2 class="h2">Director Adu-Boahene</h2>
-                        <h3 class="h3">Director</h3>
-                        <p></p>
-                    </div>
+    <div class="volunteer-team-cards-row">
+
+        <div class="volunteer-person-card" data-aos="fade-up">
+            <img src="{% static 'foundation/images/dir.jpeg' %}" alt="Director Adu-Boahene">
+            <div class="volunteer-person-card-content">
+                <div class="volunteer-person-name-role">
+                    <p class="volunteer-person-fullname">Director Adu-Boahene</p>
+                    <p class="volunteer-person-jobtitle">Director</p>
+                </div>
+                <div class="volunteer-person-link-button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7 7 17 7 17 17"/>
+                    </svg>
                 </div>
             </div>
+        </div>
 
-            <div class="column2" data-aos="fade-down">
-                <div class="team">
-                    <div class="team-img">
-                        <img class="team-image" src="{% static 'foundation/images/christy.jpeg' %}" alt="Team Image">
-                    </div>
-                    <div class="team-content">
-                        <h2 class="h2">Christiana Adu-Boahene</h2>
-                        <h3 class="h3">Assisted Director</h3>
-                        <p></p>
-                    </div>
+        <div class="volunteer-person-card" data-aos="fade-down">
+            <img src="{% static 'foundation/images/christy.jpeg' %}" alt="Christiana Adu-Boahene">
+            <div class="volunteer-person-card-content">
+                <div class="volunteer-person-name-role">
+                    <p class="volunteer-person-fullname">Christiana Adu-Boahene</p>
+                    <p class="volunteer-person-jobtitle">Assistant Director</p>
+                </div>
+                <div class="volunteer-person-link-button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7 7 17 7 17 17"/>
+                    </svg>
                 </div>
             </div>
+        </div>
 
-
-            <div class="column2" data-aos="fade-left">
-                <div class="team">
-                    <div class="team-img">
-                        <img class="team-image" src="{% static 'foundation/images/dickson.jpeg' %}" alt="Team Image">
-                    </div>
-                    <div class="team-content">
-                        <h2 class="h2">Pastor Dickson Kwasi Darko</h2>
-                        <h3 class="h3">Director of Operations</h3>
-                        <p></p>
-                        </div>
-                    </div>
+        <div class="volunteer-person-card" data-aos="fade-left">
+            <img src="{% static 'foundation/images/dickson.jpeg' %}" alt="Pastor Dickson Kwasi Darko">
+            <div class="volunteer-person-card-content">
+                <div class="volunteer-person-name-role">
+                    <p class="volunteer-person-fullname">Pastor Dickson Kwasi Darko</p>
+                    <p class="volunteer-person-jobtitle">Director of Operations</p>
                 </div>
-                <div class="column2" data-aos="fade-right">
-                    <div class="team">
-                        <div class="team-img">
-                            <img class="team-image" src="{% static 'foundation/images/robeta.jpeg' %}" alt="Team Image">
-                        </div>
-                        <div class="team-content">
-                            <h2 class="h2">Miss Adjei Roberta</h2>
-                            <h3 class="h3">Secretary</h3>
-                            <p></p>
-                        </div>
-                    </div>
+                <div class="volunteer-person-link-button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7 7 17 7 17 17"/>
+                    </svg>
                 </div>
-                <div class="column2" data-aos="fade-up">
-                    <div class="team">
-                        <div class="team-img">
-                            <img class="team-image" src="{% static 'foundation/images/bishop.jpeg' %}" alt="Team Image">
-                        </div>
-                        <div class="team-content">
-                            <h2 class="h2">Bishop Fred Bimpong</h2>
-                            <h3 class="h3">Field Coordinator</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-        
-        
-                <div class="column2" data-aos="fade-down">
-                    <div class="team">
-                        <div class="team-img">
-                            <img class="team-image" src="{% static 'foundation/images/emma.jpeg' %}" alt="Team Image">
-                        </div>
-                        <div class="team-content">
-                            <h2 class="h2">Emmanuel Adu-Boahene</h2>
-                            <h3 class="h3">Non-staff</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-           
             </div>
         </div>
-</section>
-<div class="slider video-wrapper" data-aos="fade-up">
-    <video class="background" autoplay muted loop
-        poster="https://cyphers-thecyphersagency.netdna-ssl.com/wp-content/uploads/2016/10/web-texture.jpg">
-        <source src="https://videos.pexels.com/video-files/6624838/6624838-hd_1080_1920_30fps.mp4"
-            type="video/mp4" />
-    </video>
-    <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
-    <input type="radio" name="slider" title="slide2" class="slider__nav" />
-    <input type="radio" name="slider" title="slide3" class="slider__nav" />
-    <input type="radio" name="slider" title="slide4" class="slider__nav" />
-    <div class="slider__inner">
 
-        <div class="slider__contents"><img class="slider__image rounded-circle"
-                src="{% static 'foundation/images/juliet.jpg' %}" height="150px" width="150px" alt="">
-            <h2 class="slider__caption text-white">Juliet O. Afriyie</h2>
-            <p class="text-white">Student</p>
-            <p class="slider__txt text-white">If you are looking for the right NGO company to tell them all your problems, Hope in
-                Messiah Needy is always here to help you.</p>
+        <div class="volunteer-person-card" data-aos="fade-right">
+            <img src="{% static 'foundation/images/robeta.jpeg' %}" alt="Miss Adjei Roberta">
+            <div class="volunteer-person-card-content">
+                <div class="volunteer-person-name-role">
+                    <p class="volunteer-person-fullname">Miss Adjei Roberta</p>
+                    <p class="volunteer-person-jobtitle">Secretary</p>
+                </div>
+                <div class="volunteer-person-link-button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7 7 17 7 17 17"/>
+                    </svg>
+                </div>
+            </div>
         </div>
-        <div class="slider__contents"><img class="slider__image rounded-circle"
-                src="{% static 'foundation/images/bishop.jpeg' %}" height="150px" width="150px" alt="">
-            <h2 class="slider__caption text-white">Bishop Fred</h2>
-            <p class="text-white">Field Coordinator</p>
-            <p class="slider__txt text-white">I have worked with Hope in Messiah Needy Foundation which I have never regrated but
-                being motivated to help others to come out from their mess.</p>
+
+        <div class="volunteer-person-card" data-aos="fade-up">
+            <img src="{% static 'foundation/images/bishop.jpeg' %}" alt="Bishop Fred Bimpong">
+            <div class="volunteer-person-card-content">
+                <div class="volunteer-person-name-role">
+                    <p class="volunteer-person-fullname">Bishop Fred Bimpong</p>
+                    <p class="volunteer-person-jobtitle">Field Coordinator</p>
+                </div>
+                <div class="volunteer-person-link-button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7 7 17 7 17 17"/>
+                    </svg>
+                </div>
+            </div>
         </div>
-        <div class="slider__contents"><img class="slider__image rounded-circle"
-                src="{% static 'foundation/images/boahene.jpeg' %}" height="150px" width="150px" alt="">
-            <h2 class="slider__caption text-white">Adu-Boahene</h2>
-            <p class="text-white">Director</p>
-            <p class="slider__txt text-white">We were very excited to have Charity Escapes involved with our Courageous Kids
-                Awards. The door is open to hear you out.</p>
+
+        <div class="volunteer-person-card" data-aos="fade-down">
+            <img src="{% static 'foundation/images/emma.jpeg' %}" alt="Emmanuel Adu-Boahene">
+            <div class="volunteer-person-card-content">
+                <div class="volunteer-person-name-role">
+                    <p class="volunteer-person-fullname">Emmanuel Adu-Boahene</p>
+                    <p class="volunteer-person-jobtitle">Non-staff</p>
+                </div>
+                <div class="volunteer-person-link-button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7 7 17 7 17 17"/>
+                    </svg>
+                </div>
+            </div>
         </div>
-        <div class="slider__contents"><img class="slider__image rounded-circle"
-                src="{% static 'foundation/images/godfred.jpg' %}" height="150px" width="150px" alt="">
-            <h2 class="slider__caption text-white">Godfred Yaw Tenkorang</h2>
-            <p class="text-white">Web Developer</p>
-            <p class="slider__txt text-white">I have known Hope in Messiah Needy Foundation for some years now and they are
-                reliable and always ready to have you.</p>
-        </div>
+
     </div>
-</div>
+</section>
+</section>
+
+
+<section class="testi-section">
+
+    <!-- Background pattern rings -->
+    <div class="testi-ring testi-ring-1"></div>
+    <div class="testi-ring testi-ring-2"></div>
+
+    <p class="testi-label">Testimonials</p>
+    <h2 class="testi-title">What people say</h2>
+    <div class="testi-underline"></div>
+
+    <div class="testi-track">
+
+        <div class="testi-slide active">
+            <div class="testi-quote-icon">"</div>
+            <img class="testi-photo" src="{% static 'foundation/images/juliet.jpg' %}" alt="Juliet O. Afriyie">
+            <p class="testi-text">If you are looking for the right NGO company to tell them all your problems, Hope in Messiah Needy is always here to help you.</p>
+            <p class="testi-name">Juliet O. Afriyie</p>
+            <span class="testi-role">Student</span>
+        </div>
+
+        <div class="testi-slide">
+            <div class="testi-quote-icon">"</div>
+            <img class="testi-photo" src="{% static 'foundation/images/bishop.jpeg' %}" alt="Bishop Fred">
+            <p class="testi-text">I have worked with Hope in Messiah Needy Foundation which I have never regretted but being motivated to help others come out from their mess.</p>
+            <p class="testi-name">Bishop Fred</p>
+            <span class="testi-role">Field Coordinator</span>
+        </div>
+
+        <div class="testi-slide">
+            <div class="testi-quote-icon">"</div>
+            <img class="testi-photo" src="{% static 'foundation/images/boahene.jpeg' %}" alt="Adu-Boahene">
+            <p class="testi-text">We were very excited to have Charity Escapes involved with our Courageous Kids Awards. The door is open to hear you out.</p>
+            <p class="testi-name">Adu-Boahene</p>
+            <span class="testi-role">Director</span>
+        </div>
+
+        <div class="testi-slide">
+            <div class="testi-quote-icon">"</div>
+            <img class="testi-photo" src="{% static 'foundation/images/godfred.jpg' %}" alt="Godfred Yaw Tenkorang">
+            <p class="testi-text">I have known Hope in Messiah Needy Foundation for some years now and they are reliable and always ready to have you.</p>
+            <p class="testi-name">Godfred Yaw Tenkorang</p>
+            <span class="testi-role">Web Developer</span>
+        </div>
+
+    </div>
+
+    <div class="testi-dots">
+        <button class="testi-dot active" onclick="goTo(0)"></button>
+        <button class="testi-dot" onclick="goTo(1)"></button>
+        <button class="testi-dot" onclick="goTo(2)"></button>
+        <button class="testi-dot" onclick="goTo(3)"></button>
+    </div>
+
+    <div class="testi-arrows">
+        <button class="testi-btn" onclick="prev()" aria-label="Previous">&#8592;</button>
+        <button class="testi-btn" onclick="next()" aria-label="Next">&#8594;</button>
+    </div>
+
+</section>
 
 
 
@@ -289,7 +423,8 @@
                 <div class="card blog-section" style="height:100%">
                     <img src="{{ post.image.url }}" height="350px" alt="">
                     <div class="card-body">
-                        <h4 class="card-title"><a class="blog-title" id="text-element" href="{% url 'blog-detail' post.id %}">{{ post.title }}</a></h4>
+                        <h4 class="card-title"><a class="blog-title" id="text-element"
+                                href="{% url 'blog-detail' post.id %}">{{ post.title }}</a></h4>
                         <div class="card-text">
                             <!-- <p>{{ post.content }}</p> -->
                         </div>
@@ -300,47 +435,116 @@
         </div>
     </div>
 </section>
-<section class="counter-section" style="background-color: #000;" data-aos="fade-up">
-    <div class="container-fluid">
-        <div class="row about-row">
-            <div class="col-lg-12 counter-img">
-                <div class="column">
-                    <div class="card-img" data-aos="fade-up">
-                        <img src="{% static 'foundation/images/giving.png' %}" height="50px" alt="icon">
-                        <h3 class="pt-3">1000+</h3>
-                        <p style="font-size: 20px; font-weight:bold;">Donations</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card-img" data-aos="fade-up">
-                        <img src="{% static 'foundation/images/fund.png' %}" height="50px" alt="icon">
-                        <h3 class="pt-3">90+</h3>
-                        <p style="font-size: 20px; font-weight:bold;">Fund Raised</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card-img" data-aos="fade-up">
-                        <img src="{% static 'foundation/images/life.png' %}" height="50px" alt="icon">
-                        <h3 class="pt-3">400+</h3>
-                        <p style="font-size: 20px; font-weight:bold;">Life Saved</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="card-img" data-aos="fade-up">
-                        <img src="{% static 'foundation/images/happy.png' %}" height="50px" alt="icon">
-                        <h3 class="pt-3">300+</h3>
-                        <p style="font-size: 20px; font-weight:bold;">Happy People</p>
-                    </div>
-                </div>
+<section class="stats-section" data-aos="fade-up">
+
+    <div class="stats-ring stats-ring-1"></div>
+    <div class="stats-ring stats-ring-2"></div>
+
+    <div class="stats-grid">
+
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="0">
+            <div class="stat-icon-wrap">
+                <img src="{% static 'foundation/images/giving.png' %}" height="28" alt="Donations">
             </div>
+            <div class="stat-number">1000<span>+</span></div>
+            <div class="stat-label">Donations</div>
         </div>
+
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-icon-wrap">
+                <img src="{% static 'foundation/images/fund.png' %}" height="28" alt="Fund Raised">
+            </div>
+            <div class="stat-number">90<span>+</span></div>
+            <div class="stat-label">Fund Raised</div>
+        </div>
+
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-icon-wrap">
+                <img src="{% static 'foundation/images/life.png' %}" height="28" alt="Lives Saved">
+            </div>
+            <div class="stat-number">400<span>+</span></div>
+            <div class="stat-label">Lives Saved</div>
+        </div>
+
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-icon-wrap">
+                <img src="{% static 'foundation/images/happy.png' %}" height="28" alt="Happy People">
+            </div>
+            <div class="stat-number">300<span>+</span></div>
+            <div class="stat-label">Happy People</div>
+        </div>
+
     </div>
 </section>
 
+
+
+<div class="nf-welcome-overlay" id="nfWelcomeOverlay">
+  <div class="nf-welcome-card" role="dialog" aria-modal="true" aria-labelledby="nfWelcomeTitle">
+    <div class="nf-welcome-top">
+      <div class="nf-welcome-dotgrid"></div>
+      <div class="nf-welcome-ring nf-welcome-ring-1"></div>
+      <div class="nf-welcome-ring nf-welcome-ring-2"></div>
+      <button class="nf-welcome-close" id="nfWelcomeClose" aria-label="Close">&times;</button>
+      <span class="nf-welcome-eyebrow"><i class="fa fa-heart"></i> Non-Profit Charity</span>
+      <h2 class="nf-welcome-brand">Hope in Messiah <em>Needy Foundation</em></h2>
+    </div>
+
+    <div class="nf-welcome-body">
+      <h3 id="nfWelcomeTitle" class="nf-welcome-title">An Independent Voice for the Most Vulnerable</h3>
+      <p class="nf-welcome-desc">We're an independent non-profit easing poverty across Ghana — caring for widows and the poor, supporting people with physical disabilities, and building the church facilities that hold communities together.</p>
+
+      <div class="nf-welcome-chips">
+        <span class="nf-welcome-chip"><span class="nf-welcome-chip-icon"><i class="fa fa-female"></i></span>Needy &amp; Widows</span>
+        <span class="nf-welcome-chip"><span class="nf-welcome-chip-icon"><i class="fa fa-wheelchair"></i></span>Physically Challenged</span>
+        <span class="nf-welcome-chip"><span class="nf-welcome-chip-icon"><i class="fa fa-home"></i></span>Church Facility</span>
+      </div>
+
+      <div class="nf-welcome-actions">
+        <a class="nf-cta" href="{% url 'donate' %}">Donate Now</a>
+        <button class="nf-welcome-later" id="nfWelcomeLater" type="button">Maybe later</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <script>
+(function(){
+  var overlay = document.getElementById('nfWelcomeOverlay');
+  var closeBtn = document.getElementById('nfWelcomeClose');
+  var laterBtn = document.getElementById('nfWelcomeLater');
+  var reopenBtn = document.getElementById('nfReopen');
+
+  function openModal(){
+    overlay.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    overlay.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  setTimeout(openModal, 700);
+
+  closeBtn.addEventListener('click', closeModal);
+  laterBtn.addEventListener('click', closeModal);
+  reopenBtn.addEventListener('click', openModal);
+  overlay.addEventListener('click', function(e){
+    if(e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+})();
+</script>
+
+
+<!-- <script>
     let currentSlide = 0;
 const slides = document.querySelectorAll('.sliders');
-const slideInterval = 7000; // Change slide every 5 seconds (5000 milliseconds)
+const slideInterval = 7000; 
 
 function showSlide(index) {
 slides.forEach((slide, i) => {
@@ -368,13 +572,13 @@ if (currentSlide < 0) {
 showSlide(currentSlide);
 }
 
-// Automatic slide change every 5 seconds
+
 setInterval(nextSlide, slideInterval);
 
 // Initial setup
 showSlide(currentSlide);
 
-</script>
+</script> -->
 <script>
     function truncateText(selector, maxLength) {
         const element = document.querySelector(selector);
@@ -383,6 +587,63 @@ showSlide(currentSlide);
             element.textContent = text.slice(0, maxLength) + '...';
         }
     }
-    truncateText('#text-element', 60); // Truncate text to 120 charactors
+    truncateText('#text-element', 60); 
 </script>
+
+
+<script>
+    const slides = document.querySelectorAll('#nfSlider .sliders');
+    const dotsWrap = document.getElementById('nfDots');
+    let current = 0;
+    let timer;
+
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        dot.innerHTML = '<span class="nf-fill"></span>';
+        dot.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(dot);
+    });
+    const dots = dotsWrap.querySelectorAll('button');
+
+    function render() {
+        slides.forEach((s, i) => s.classList.toggle('active', i === current));
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    }
+
+    function goTo(i) {
+        current = (i + slides.length) % slides.length;
+        render();
+        resetTimer();
+    }
+
+    function nfNextSlide() { goTo(current + 1); }
+    function nfPrevSlide() { goTo(current - 1); }
+
+    function resetTimer() {
+        clearTimeout(timer);
+        timer = setTimeout(nfNextSlide, 6000);
+    }
+
+    render();
+    resetTimer();
+</script>
+<script>
+let testiCur = 0;
+const testiSlides = document.querySelectorAll('.testi-slide');
+const testiDots = document.querySelectorAll('.testi-dot');
+
+function goTo(n) {
+    testiSlides[testiCur].classList.remove('active');
+    testiDots[testiCur].classList.remove('active');
+    testiCur = (n + testiSlides.length) % testiSlides.length;
+    testiSlides[testiCur].classList.add('active');
+    testiDots[testiCur].classList.add('active');
+}
+function next() { goTo(testiCur + 1); }
+function prev() { goTo(testiCur - 1); }
+
+setInterval(next, 5000);
+</script>
+
 {% endblock %}
