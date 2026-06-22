@@ -343,183 +343,111 @@
 </style>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'foundation/images/needy-logo.png' %}" height="70px" alt=""></a>
-      <span style="font-size: 25px; color: #210062; font-family: Merriweather; font-weight:600;" class="d-none d-md-block">Hope In Messiah <br> Needy Foundation</span>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="{% url 'home' %}">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'about' %}">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'latest_cause' %}">Latest Causes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'social_event' %}">Social Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'category' %}">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-          </li>
+  <nav class="nf-navbar fixed-top">
+  <div class="nf-container">
+    <a class="nf-brand" href="{% url 'home' %}">
+      <img src="{% static 'foundation/images/needy-logo.png' %}" class="nf-logo-img" alt="Needy Foundation logo">
+      <span class="nf-title">
+        Hope In Messiah
+        <span class="nf-subtitle">Needy Foundation</span>
+      </span>
+    </a>
+
+    <button class="nf-toggler" type="button" id="nfToggler" aria-controls="nfNavLinks" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="nf-toggler-bar"></span>
+      <span class="nf-toggler-bar"></span>
+      <span class="nf-toggler-bar"></span>
+    </button>
+
+    <div class="nf-collapse" id="nfNavLinks">
+      <ul class="nf-links">
+        <li><a class="nf-link is-active" href="{% url 'home' %}">Home</a></li>
+        <li><a class="nf-link" href="{% url 'about' %}">About</a></li>
+        <li><a class="nf-link" href="{% url 'latest_cause' %}">Latest Causes</a></li>
+        <li><a class="nf-link" href="{% url 'social_event' %}">Social Events</a></li>
+        <li><a class="nf-link" href="{% url 'blog' %}">Blog</a></li>
+        <li><a class="nf-link" href="{% url 'category' %}">Gallery</a></li>
+        <li><a class="nf-link" href="{% url 'contact' %}">Contact</a></li>
+      </ul>
+      <a class="nf-cta" href="{% url 'donate' %}">Donate</a>
+    </div>
+  </div>
+</nav>
+  {% block content %}{% endblock %}
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+ <footer class="him-footer">
+  <div class="him-footer-top">
+    <div class="him-footer-dot-grid"></div>
+    <div class="him-footer-ring" style="width:420px;height:420px;top:-180px;right:-140px;border:50px solid rgba(240,160,75,0.05);"></div>
+    <div class="him-footer-ring" style="width:200px;height:200px;top:-40px;right:30px;border:2px solid rgba(240,160,75,0.12);"></div>
+    <div class="him-footer-ring" style="width:300px;height:300px;bottom:-160px;left:-120px;border:40px solid rgba(240,160,75,0.05);"></div>
+
+    <div class="him-footer-grid">
+      <div>
+        <p class="him-footer-brand-name">Hope in Messiah Needy Foundation</p>
+        <span class="him-footer-brand-tag">Non-profit charity</span>
+        <p class="him-footer-desc">An independent social service motivated by the concern of high poverty rates and the need to provide assistance to those in need across our communities.</p>
+        <a href="https://www.himfoundation.net/" class="him-footer-donate-btn">
+          <i class="ti ti-heart" aria-hidden="true"></i>
+          Donate now
+        </a>
+      </div>
+
+      <div>
+        <p class="him-footer-col-title">What we do</p>
+        <ul class="him-footer-links">
+          <li><a href="#"><i class="ti ti-arrow-right" aria-hidden="true"></i>Donate</a></li>
+          <li><a href="#"><i class="ti ti-arrow-right" aria-hidden="true"></i>Church facility</a></li>
+          <li><a href="#"><i class="ti ti-arrow-right" aria-hidden="true"></i>Care for widows</a></li>
+          <li><a href="#"><i class="ti ti-arrow-right" aria-hidden="true"></i>Help the disabled</a></li>
         </ul>
-        <div>
-          <a class="btn btn-outline-secondary col-sm d-flex justify-content-center" href="{% url 'donate' %}">Donate</a>
+      </div>
+
+      <div>
+        <p class="him-footer-col-title">Quick links</p>
+        <ul class="him-footer-links">
+          <li><a href="#"><i class="ti ti-arrow-right" aria-hidden="true"></i>About us</a></li>
+          <li><a href="#"><i class="ti ti-arrow-right" aria-hidden="true"></i>Latest causes</a></li>
+          <li><a href="#"><i class="ti ti-arrow-right" aria-hidden="true"></i>Our blog</a></li>
+          <li><a href="#"><i class="ti ti-arrow-right" aria-hidden="true"></i>Contact us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="him-footer-col-title">Get in touch</p>
+        <div class="him-footer-contact-item">
+          <div class="him-footer-contact-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
+          <p class="him-footer-contact-text">Kronum, Ashanti Region, Ghana</p>
+        </div>
+        <div class="him-footer-contact-item">
+          <div class="him-footer-contact-icon"><i class="ti ti-mail" aria-hidden="true"></i></div>
+          <p class="him-footer-contact-text">hopeinmessiahneedyfoundation<br>@gmail.com</p>
+        </div>
+        <div class="him-footer-contact-item">
+          <div class="him-footer-contact-icon"><i class="ti ti-phone" aria-hidden="true"></i></div>
+          <p class="him-footer-contact-text">+233 24 497 4409</p>
         </div>
       </div>
     </div>
-  </nav>
-  {% block content %}{% endblock %}
-  <!-- Remove the container if you want to extend the Footer to full width. -->
-  <div class=" my-5" data-aos="fade-up">
-    <!-- Footer -->
-    <footer class="text-center text-lg-start text-white" style="background-color: #6844b2">
-      <!-- Grid container -->
-      <div class=" p-4 pb-0">
-        <!-- Section: Links -->
-        <section class="">
-          <!--Grid row-->
-          <div class="row">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">
-                Hope in messiah <br> needy foundation
-              </h6>
-              <p>
-                Hope in messiah needy foundation is an independent social service functioning as a non-profit charity. Our charitable
-                activities were motivated by the concern of high rate of poverty in some part of our country and the need to provide
-                assistance.
-              </p>
-            </div>
-            <!-- Grid column -->
-  
-            <hr class="w-100 clearfix d-md-none" />
-  
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">What we do</h6>
-              <p>
-                <a class="text-white">Donate</a>
-              </p>
-              <p>
-                <a class="text-white">Church Facility</a>
-              </p>
-              <p>
-                <a class="text-white">Special Care for Widows</a>
-              </p>
-              <p>
-                <a class="text-white">Help the Disability</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-  
-            <hr class="w-100 clearfix d-md-none" />
-  
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">
-                Useful links
-              </h6>
-              <p>
-                <a href="{% url 'about' %}" class="text-white">Know More About Us?</a>
-              </p>
-              <p>
-                <a href="{% url 'latest_cause' %}" class="text-white">Latest Causes</a>
-              </p>
-              <p>
-                <a href="{% url 'blog' %}" class="text-white">Our Blog</a>
-              </p>
-              <p>
-                <a href="{% url 'contact' %}" class="text-white">Need Help?</a>
-              </p>
-            </div>
-  
-            <!-- Grid column -->
-            <hr class="w-100 clearfix d-md-none" />
-  
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-              <p><i class="fas fa-home mr-3"></i> Kronum, Ashanti Region</p>
-              <p><i class="fas fa-envelope mr-3"></i>hopeinmessiahneedyfoundation@gmail.com</p>
-              <p><i class="fas fa-phone mr-3"></i> +233 24 497 4409</p>
-            </div>
-            <!-- Grid column -->
-          </div>
-          <!--Grid row-->
-        </section>
-        <!-- Section: Links -->
-  
-        <hr class="my-3">
-  
-        <!-- Section: Copyright -->
-        <section class="p-3 pt-0">
-          <div class="row d-flex align-items-center">
-            <!-- Grid column -->
-            <div class="col-md-7 col-lg-8 text-center text-md-start">
-              <!-- Copyright -->
-              <div class="p-3">
-                © 2024 Copyright:
-                <a class="text-white" href="https://www.himfoundation.net/">himfoundation.net</a>
-              </div>
-              <!-- Copyright -->
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-              <!-- Facebook -->
-              <a href="https://web.facebook.com/profile.php?id=100092590501953" class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                  class="fab fa-facebook-f"></i></a>
-  
-              <!-- Twitter -->
-              <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                  class="fab fa-twitter"></i></a>
-  
-              <!-- Google -->
-              <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                  class="fab fa-youtube"></i></a>
-  
-              <!-- Instagram -->
-              <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"><i
-                  class="fab fa-instagram"></i></a>
-            </div>
-            <!-- Grid column -->
-          </div>
-        </section>
-
-        <!-- Section: Copyright -->
-        <section class="text-center">
-          <div class="d-flex align-items-center">
-            <!-- Grid column -->
-            <div class="col-md-12 text-center">
-              <!-- Copyright -->
-              <div>
-                Developed by:
-                <a class="text-white" href="https://godeytech.com/">Godey Tech</a>
-              </div>
-              <!-- Copyright -->
-            </div>
-          </div>
-        </section>
-        <!-- Section: Copyright -->
-      </div>
-      <!-- Grid container -->
-    </footer>
-    <!-- Footer -->
   </div>
+
+  <hr class="him-footer-divider">
+
+  <div class="him-footer-bottom">
+    <p class="him-footer-copyright">
+      &copy; 2024 <a href="https://www.himfoundation.net/">himfoundation.net</a> &mdash; All rights reserved
+    </p>
+    <div class="him-footer-socials">
+      <a href="https://web.facebook.com/profile.php?id=100092590501953" class="him-footer-social-btn" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+      <a href="#" class="him-footer-social-btn" aria-label="Twitter"><i class="ti ti-brand-twitter"></i></a>
+      <a href="#" class="him-footer-social-btn" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
+      <a href="#" class="him-footer-social-btn" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+    </div>
+  </div>
+
+  <p class="him-footer-dev">Developed by <a href="https://godeytech.com/">Godey Tech</a></p>
+</footer>
+
   <!-- End of .container -->
   <!-- <button id="btnScrollToTop">
     <i class="material-icons d-flex justify-content-center">arrow_upward</i>
@@ -556,6 +484,35 @@
 
         });
       </script>
+
+     <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const toggler = document.getElementById('nfToggler');
+  const collapse = document.getElementById('nfNavLinks');
+
+  toggler.addEventListener('click', function () {
+    const isOpen = collapse.classList.toggle('is-open');
+    toggler.setAttribute('aria-expanded', isOpen);
+  });
+
+  // close menu when a link is clicked (mobile)
+  collapse.querySelectorAll('.nf-link, .nf-cta').forEach(function (link) {
+    link.addEventListener('click', function () {
+      collapse.classList.remove('is-open');
+      toggler.setAttribute('aria-expanded', false);
+    });
+  });
+
+  // close menu when clicking outside it
+  document.addEventListener('click', function (e) {
+    const isClickInside = collapse.contains(e.target) || toggler.contains(e.target);
+    if (!isClickInside) {
+      collapse.classList.remove('is-open');
+      toggler.setAttribute('aria-expanded', false);
+    }
+  });
+});
+</script> 
 
 </body>
 
